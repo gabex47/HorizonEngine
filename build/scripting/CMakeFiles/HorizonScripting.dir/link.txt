@@ -1,2 +1,0 @@
-/usr/bin/ar qc libHorizonScripting.a CMakeFiles/HorizonScripting.dir/src/LuauVM.cpp.o
-/usr/bin/ranlib libHorizonScripting.a
