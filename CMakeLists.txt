@@ -40,6 +40,16 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(glfw glad glm)
 
+FetchContent_Declare(
+    miniaudio
+    URL https://raw.githubusercontent.com/mackron/miniaudio/master/miniaudio.h
+    DOWNLOAD_NO_EXTRACT TRUE
+)
+FetchContent_MakeAvailable(miniaudio)
+
+add_library(miniaudio INTERFACE)
+target_include_directories(miniaudio INTERFACE ${miniaudio_SOURCE_DIR})
+
 add_library(HorizonShared INTERFACE)
 target_include_directories(HorizonShared INTERFACE
     ${CMAKE_CURRENT_SOURCE_DIR}/shared/include
@@ -54,12 +64,16 @@ add_library(HorizonCore STATIC
     engine/src/renderer/Camera.cpp
     engine/src/renderer/Renderer.cpp
     engine/src/renderer/Shader.cpp
+    engine/src/services/BindableEvent.cpp
     engine/src/services/HorizonStore.cpp
     engine/src/services/LoopService.cpp
     engine/src/services/MessagingService.cpp
     engine/src/services/Scene.cpp
     engine/src/services/SharedStorage.cpp
     engine/src/services/ServerScripts.cpp
+    engine/src/services/SoundService.cpp
+    engine/src/services/TagService.cpp
+    engine/src/services/TweenService.cpp
 )
 target_include_directories(HorizonCore PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/engine/src)
 target_compile_features(HorizonCore PUBLIC cxx_std_20)
@@ -67,9 +81,19 @@ target_link_libraries(HorizonCore PUBLIC
     HorizonShared
     glfw
     glm::glm
+    miniaudio
     nlohmann_json::nlohmann_json
     OpenGL::GL
 )
+
+if(APPLE)
+    target_link_libraries(HorizonCore PUBLIC
+        "-framework AudioToolbox"
+        "-framework AudioUnit"
+        "-framework CoreAudio"
+        "-framework CoreFoundation"
+    )
+endif()
 
 add_subdirectory(scripting)
 

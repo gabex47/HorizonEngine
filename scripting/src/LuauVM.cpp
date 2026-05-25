@@ -4,12 +4,16 @@
 #include "Part.h"
 #include "events/HorizonEvent.h"
 #include "events/HorizonFunction.h"
+#include "services/BindableEvent.h"
 #include "services/HorizonStore.h"
 #include "services/LoopService.h"
 #include "services/MessagingService.h"
 #include "services/Scene.h"
 #include "services/ServerScripts.h"
 #include "services/SharedStorage.h"
+#include "services/SoundService.h"
+#include "services/TagService.h"
+#include "services/TweenService.h"
 
 #if defined(__clang__) || defined(__GNUC__)
 #pragma GCC diagnostic push
@@ -29,7 +33,9 @@
 #include <cstring>
 #include <iostream>
 #include <memory>
+#include <new>
 #include <string>
+#include <unordered_map>
 #include <utility>
 #include <vector>
 
@@ -40,30 +46,41 @@ constexpr const char* kServerScriptsMetatable = "Horizon.ServerScripts";
 constexpr const char* kLoopServiceMetatable = "Horizon.LoopService";
 constexpr const char* kHorizonStoreMetatable = "Horizon.HorizonStore";
 constexpr const char* kMessagingServiceMetatable = "Horizon.MessagingService";
+constexpr const char* kTweenMetatable = "Horizon.Tween";
+constexpr const char* kTweenServiceMetatable = "Horizon.TweenService";
+constexpr const char* kSoundServiceMetatable = "Horizon.SoundService";
+constexpr const char* kTagServiceMetatable = "Horizon.TagService";
 constexpr const char* kServicesSmokeTest = R"(
--- LoopService test
-LoopService:BindToHeartbeat("TestBind", function(dt)
-  -- just needs to be registered, not printed every frame
+-- TweenService test
+local part = Instance.new("Part")
+part.Name = "TweenTest"
+part:SetParent(Scene)
+local tween = TweenService:Create(part, {Duration=1.0, EasingStyle="Sine", EasingDirection="Out"}, {PositionX=5.0})
+tween:Play()
+print("Tween created")
+
+-- SoundService test
+SoundService:SetVolume(1.0)
+SoundService:PlaySound("test.wav")
+print("SoundService online")
+
+-- BindableEvent test
+local be = Instance.new("BindableEvent")
+be:Connect(function(args)
+  print("BindableEvent fired: " .. args[1])
 end)
-print("LoopService bound")
+be:Fire({"hello"})
 
--- HorizonStore test
-HorizonStore:SetData("PlayerName", "Rian")
-print(HorizonStore:GetData("PlayerName"))
-HorizonStore:RemoveKey("PlayerName")
-print(tostring(HorizonStore:HasKey("PlayerName")))
-
-print("HorizonStore online")
-
-MessagingService:SubscribeAsync("GameStart", function(msg)
-  print("Received: " .. msg)
-end)
-MessagingService:PublishAsync("GameStart", "Game is starting!")
-print("MessagingService online")
+-- TagService test
+local p = Instance.new("Part")
+TagService:AddTag(p, "Enemy")
+print(tostring(TagService:HasTag(p, "Enemy")))
+print("TagService online")
 )";
 
 using InstanceStore = std::vector<std::shared_ptr<Horizon::Instance>>;
 using CallbackRefStore = std::vector<int>;
+using TweenHandle = std::shared_ptr<Horizon::Tween>;
 
 Horizon::Instance* checkInstance(lua_State* L, int index)
 {
@@ -90,6 +107,34 @@ Horizon::HorizonFunction* checkHorizonFunction(lua_State* L, int index)
     return func;
 }
 
+Horizon::BindableEvent* checkBindableEvent(lua_State* L, int index)
+{
+    auto* event = dynamic_cast<Horizon::BindableEvent*>(checkInstance(L, index));
+    if (!event)
+        luaL_typeerror(L, index, "BindableEvent");
+
+    return event;
+}
+
+TweenHandle* checkTweenHandle(lua_State* L, int index)
+{
+    return static_cast<TweenHandle*>(luaL_checkudata(L, index, kTweenMetatable));
+}
+
+Horizon::Tween* checkTween(lua_State* L, int index)
+{
+    auto* handle = checkTweenHandle(L, index);
+    if (!handle || !*handle)
+        luaL_typeerror(L, index, "Tween");
+
+    return handle->get();
+}
+
+std::shared_ptr<Horizon::Instance> sharedInstance(lua_State* L, int index)
+{
+    return checkInstance(L, index)->shared_from_this();
+}
+
 void pushInstance(lua_State* L, Horizon::Instance* instance)
 {
     auto** userdata = static_cast<Horizon::Instance**>(
@@ -97,6 +142,65 @@ void pushInstance(lua_State* L, Horizon::Instance* instance)
     *userdata = instance;
     luaL_getmetatable(L, kInstanceMetatable);
     lua_setmetatable(L, -2);
+}
+
+void pushTween(lua_State* L, std::shared_ptr<Horizon::Tween> tween)
+{
+    auto* userdata = static_cast<TweenHandle*>(lua_newuserdata(L, sizeof(TweenHandle)));
+    new (userdata) TweenHandle(std::move(tween));
+    luaL_getmetatable(L, kTweenMetatable);
+    lua_setmetatable(L, -2);
+}
+
+Horizon::TweenInfo readTweenInfo(lua_State* L, int index)
+{
+    Horizon::TweenInfo info;
+    luaL_checktype(L, index, LUA_TTABLE);
+    const int table = lua_absindex(L, index);
+
+    lua_getfield(L, table, "Duration");
+    if (lua_isnumber(L, -1))
+        info.Duration = static_cast<float>(lua_tonumber(L, -1));
+    lua_pop(L, 1);
+
+    lua_getfield(L, table, "EasingStyle");
+    if (const char* value = lua_tostring(L, -1))
+        info.EasingStyle = value;
+    lua_pop(L, 1);
+
+    lua_getfield(L, table, "EasingDirection");
+    if (const char* value = lua_tostring(L, -1))
+        info.EasingDirection = value;
+    lua_pop(L, 1);
+
+    lua_getfield(L, table, "RepeatCount");
+    if (lua_isnumber(L, -1))
+        info.RepeatCount = static_cast<int>(lua_tonumber(L, -1));
+    lua_pop(L, 1);
+
+    lua_getfield(L, table, "Reverses");
+    if (lua_isboolean(L, -1))
+        info.Reverses = lua_toboolean(L, -1) != 0;
+    lua_pop(L, 1);
+    return info;
+}
+
+std::unordered_map<std::string, float> readFloatGoals(lua_State* L, int index)
+{
+    luaL_checktype(L, index, LUA_TTABLE);
+    const int table = lua_absindex(L, index);
+    std::unordered_map<std::string, float> goals;
+
+    lua_pushnil(L);
+    while (lua_next(L, table) != 0)
+    {
+        const char* key = lua_tostring(L, -2);
+        if (key && lua_isnumber(L, -1))
+            goals[key] = static_cast<float>(lua_tonumber(L, -1));
+        lua_pop(L, 1);
+    }
+
+    return goals;
 }
 
 std::vector<std::string> readStringArgs(lua_State* L, int index)
@@ -267,6 +371,54 @@ void pushMessagingService(lua_State* L, Horizon::MessagingService* service)
     lua_setmetatable(L, -2);
 }
 
+Horizon::TweenService* checkTweenService(lua_State* L, int index)
+{
+    auto** userdata = static_cast<Horizon::TweenService**>(
+        luaL_checkudata(L, index, kTweenServiceMetatable));
+    return *userdata;
+}
+
+void pushTweenService(lua_State* L, Horizon::TweenService* service)
+{
+    auto** userdata = static_cast<Horizon::TweenService**>(
+        lua_newuserdata(L, sizeof(Horizon::TweenService*)));
+    *userdata = service;
+    luaL_getmetatable(L, kTweenServiceMetatable);
+    lua_setmetatable(L, -2);
+}
+
+Horizon::SoundService* checkSoundService(lua_State* L, int index)
+{
+    auto** userdata = static_cast<Horizon::SoundService**>(
+        luaL_checkudata(L, index, kSoundServiceMetatable));
+    return *userdata;
+}
+
+void pushSoundService(lua_State* L, Horizon::SoundService* service)
+{
+    auto** userdata = static_cast<Horizon::SoundService**>(
+        lua_newuserdata(L, sizeof(Horizon::SoundService*)));
+    *userdata = service;
+    luaL_getmetatable(L, kSoundServiceMetatable);
+    lua_setmetatable(L, -2);
+}
+
+Horizon::TagService* checkTagService(lua_State* L, int index)
+{
+    auto** userdata = static_cast<Horizon::TagService**>(
+        luaL_checkudata(L, index, kTagServiceMetatable));
+    return *userdata;
+}
+
+void pushTagService(lua_State* L, Horizon::TagService* service)
+{
+    auto** userdata = static_cast<Horizon::TagService**>(
+        lua_newuserdata(L, sizeof(Horizon::TagService*)));
+    *userdata = service;
+    luaL_getmetatable(L, kTagServiceMetatable);
+    lua_setmetatable(L, -2);
+}
+
 int instanceSetParent(lua_State* L)
 {
     auto* self = checkInstance(L, 1);
@@ -377,6 +529,29 @@ int functionOnServerInvoke(lua_State* L)
     return 0;
 }
 
+int bindableFire(lua_State* L)
+{
+    auto* event = checkBindableEvent(L, 1);
+    event->Fire(readStringArgs(L, 2));
+    return 0;
+}
+
+int bindableConnect(lua_State* L)
+{
+    auto* event = checkBindableEvent(L, 1);
+    const int ref = retainLuaFunction(L, 2);
+    event->Connect([L, ref](const std::vector<std::string>& args) {
+        callLuaCallback(L, ref, args);
+    });
+    return 0;
+}
+
+int bindableDisconnectAll(lua_State* L)
+{
+    checkBindableEvent(L, 1)->DisconnectAll();
+    return 0;
+}
+
 int instanceIndex(lua_State* L)
 {
     auto* self = checkInstance(L, 1);
@@ -414,6 +589,12 @@ int instanceIndex(lua_State* L)
         lua_pushcfunction(L, functionInvokeServer, "HorizonFunction.InvokeServer");
     else if (dynamic_cast<Horizon::HorizonFunction*>(self) && std::strcmp(key, "OnServerInvoke") == 0)
         pushCallbackMethod(L, functionOnServerInvoke, "HorizonFunction.OnServerInvoke");
+    else if (dynamic_cast<Horizon::BindableEvent*>(self) && std::strcmp(key, "Fire") == 0)
+        lua_pushcfunction(L, bindableFire, "BindableEvent.Fire");
+    else if (dynamic_cast<Horizon::BindableEvent*>(self) && std::strcmp(key, "Connect") == 0)
+        pushCallbackMethod(L, bindableConnect, "BindableEvent.Connect");
+    else if (dynamic_cast<Horizon::BindableEvent*>(self) && std::strcmp(key, "DisconnectAll") == 0)
+        lua_pushcfunction(L, bindableDisconnectAll, "BindableEvent.DisconnectAll");
     else
         lua_pushnil(L);
 
@@ -443,6 +624,8 @@ int instanceNew(lua_State* L)
         instance = std::make_shared<Horizon::HorizonEvent>();
     else if (std::strcmp(className, "HorizonFunction") == 0)
         instance = std::make_shared<Horizon::HorizonFunction>();
+    else if (std::strcmp(className, "BindableEvent") == 0)
+        instance = std::make_shared<Horizon::BindableEvent>();
     else
         instance = std::make_shared<Horizon::Instance>();
 
@@ -621,6 +804,160 @@ int messagingServiceIndex(lua_State* L)
     return 1;
 }
 
+int tweenGc(lua_State* L)
+{
+    checkTweenHandle(L, 1)->~TweenHandle();
+    return 0;
+}
+
+int tweenPlay(lua_State* L)
+{
+    checkTween(L, 1)->Play();
+    return 0;
+}
+
+int tweenPause(lua_State* L)
+{
+    checkTween(L, 1)->Pause();
+    return 0;
+}
+
+int tweenCancel(lua_State* L)
+{
+    checkTween(L, 1)->Cancel();
+    return 0;
+}
+
+int tweenIsPlaying(lua_State* L)
+{
+    lua_pushboolean(L, checkTween(L, 1)->IsPlaying());
+    return 1;
+}
+
+int tweenIndex(lua_State* L)
+{
+    const char* key = luaL_checkstring(L, 2);
+    if (std::strcmp(key, "Play") == 0)
+        lua_pushcfunction(L, tweenPlay, "Tween.Play");
+    else if (std::strcmp(key, "Pause") == 0)
+        lua_pushcfunction(L, tweenPause, "Tween.Pause");
+    else if (std::strcmp(key, "Cancel") == 0)
+        lua_pushcfunction(L, tweenCancel, "Tween.Cancel");
+    else if (std::strcmp(key, "IsPlaying") == 0)
+        lua_pushcfunction(L, tweenIsPlaying, "Tween.IsPlaying");
+    else
+        lua_pushnil(L);
+    return 1;
+}
+
+int tweenServiceCreate(lua_State* L)
+{
+    auto* service = checkTweenService(L, 1);
+    auto tween = service->Create(sharedInstance(L, 2), readTweenInfo(L, 3), readFloatGoals(L, 4));
+    pushTween(L, std::move(tween));
+    return 1;
+}
+
+int tweenServiceIndex(lua_State* L)
+{
+    const char* key = luaL_checkstring(L, 2);
+    if (std::strcmp(key, "Create") == 0)
+        lua_pushcfunction(L, tweenServiceCreate, "TweenService.Create");
+    else
+        lua_pushnil(L);
+    return 1;
+}
+
+int soundInit(lua_State* L)
+{
+    lua_pushboolean(L, checkSoundService(L, 1)->Init());
+    return 1;
+}
+
+int soundPlaySound(lua_State* L)
+{
+    checkSoundService(L, 1)->PlaySound(luaL_checkstring(L, 2));
+    return 0;
+}
+
+int soundStopAll(lua_State* L)
+{
+    checkSoundService(L, 1)->StopAll();
+    return 0;
+}
+
+int soundSetVolume(lua_State* L)
+{
+    checkSoundService(L, 1)->SetVolume(static_cast<float>(luaL_checknumber(L, 2)));
+    return 0;
+}
+
+int soundServiceIndex(lua_State* L)
+{
+    const char* key = luaL_checkstring(L, 2);
+    if (std::strcmp(key, "Init") == 0)
+        lua_pushcfunction(L, soundInit, "SoundService.Init");
+    else if (std::strcmp(key, "PlaySound") == 0)
+        lua_pushcfunction(L, soundPlaySound, "SoundService.PlaySound");
+    else if (std::strcmp(key, "StopAll") == 0)
+        lua_pushcfunction(L, soundStopAll, "SoundService.StopAll");
+    else if (std::strcmp(key, "SetVolume") == 0)
+        lua_pushcfunction(L, soundSetVolume, "SoundService.SetVolume");
+    else
+        lua_pushnil(L);
+    return 1;
+}
+
+int tagAddTag(lua_State* L)
+{
+    checkTagService(L, 1)->AddTag(sharedInstance(L, 2), luaL_checkstring(L, 3));
+    return 0;
+}
+
+int tagRemoveTag(lua_State* L)
+{
+    checkTagService(L, 1)->RemoveTag(sharedInstance(L, 2), luaL_checkstring(L, 3));
+    return 0;
+}
+
+int tagHasTag(lua_State* L)
+{
+    lua_pushboolean(L, checkTagService(L, 1)->HasTag(sharedInstance(L, 2), luaL_checkstring(L, 3)));
+    return 1;
+}
+
+int tagGetTagged(lua_State* L)
+{
+    const auto tagged = checkTagService(L, 1)->GetTagged(luaL_checkstring(L, 2));
+    lua_createtable(L, static_cast<int>(tagged.size()), 0);
+    int index = 1;
+    for (const auto& instance : tagged)
+    {
+        if (instance)
+        {
+            pushInstance(L, instance.get());
+            lua_rawseti(L, -2, index++);
+        }
+    }
+    return 1;
+}
+
+int tagServiceIndex(lua_State* L)
+{
+    const char* key = luaL_checkstring(L, 2);
+    if (std::strcmp(key, "AddTag") == 0)
+        lua_pushcfunction(L, tagAddTag, "TagService.AddTag");
+    else if (std::strcmp(key, "RemoveTag") == 0)
+        lua_pushcfunction(L, tagRemoveTag, "TagService.RemoveTag");
+    else if (std::strcmp(key, "HasTag") == 0)
+        lua_pushcfunction(L, tagHasTag, "TagService.HasTag");
+    else if (std::strcmp(key, "GetTagged") == 0)
+        lua_pushcfunction(L, tagGetTagged, "TagService.GetTagged");
+    else
+        lua_pushnil(L);
+    return 1;
+}
+
 void registerInstanceFactory(lua_State* L, InstanceStore* store)
 {
     lua_createtable(L, 0, 1);
@@ -649,6 +986,15 @@ void registerServiceGlobals(lua_State* L)
 
     pushMessagingService(L, &Horizon::MessagingService::Get());
     lua_setglobal(L, "MessagingService");
+
+    pushTweenService(L, &Horizon::TweenService::Get());
+    lua_setglobal(L, "TweenService");
+
+    pushSoundService(L, &Horizon::SoundService::Get());
+    lua_setglobal(L, "SoundService");
+
+    pushTagService(L, &Horizon::TagService::Get());
+    lua_setglobal(L, "TagService");
 }
 
 void registerInstanceBindings(lua_State* L, InstanceStore* store, CallbackRefStore* refs)
@@ -693,6 +1039,40 @@ void registerInstanceBindings(lua_State* L, InstanceStore* store, CallbackRefSto
     {
         lua_pushlightuserdata(L, refs);
         lua_pushcclosurek(L, messagingServiceIndex, "MessagingService.__index", 1, nullptr);
+        lua_setfield(L, -2, "__index");
+    }
+
+    lua_pop(L, 1);
+
+    if (luaL_newmetatable(L, kTweenMetatable))
+    {
+        lua_pushcfunction(L, tweenIndex, "Tween.__index");
+        lua_setfield(L, -2, "__index");
+        lua_pushcfunction(L, tweenGc, "Tween.__gc");
+        lua_setfield(L, -2, "__gc");
+    }
+
+    lua_pop(L, 1);
+
+    if (luaL_newmetatable(L, kTweenServiceMetatable))
+    {
+        lua_pushcfunction(L, tweenServiceIndex, "TweenService.__index");
+        lua_setfield(L, -2, "__index");
+    }
+
+    lua_pop(L, 1);
+
+    if (luaL_newmetatable(L, kSoundServiceMetatable))
+    {
+        lua_pushcfunction(L, soundServiceIndex, "SoundService.__index");
+        lua_setfield(L, -2, "__index");
+    }
+
+    lua_pop(L, 1);
+
+    if (luaL_newmetatable(L, kTagServiceMetatable))
+    {
+        lua_pushcfunction(L, tagServiceIndex, "TagService.__index");
         lua_setfield(L, -2, "__index");
     }
 

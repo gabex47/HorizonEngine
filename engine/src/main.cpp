@@ -8,14 +8,19 @@
 #include "renderer/Renderer.h"
 #include "services/LoopService.h"
 #include "services/Scene.h"
+#include "services/SoundService.h"
+#include "services/TweenService.h"
 
 int main()
 {
     std::cout << "HorizonEngine v0.1 — Opal" << std::endl;
 
+    Horizon::SoundService::Get().Init();
+    Horizon::LoopService::Get().BindToHeartbeat("TweenService", [](float dt) {
+        Horizon::TweenService::Get().Tick(dt);
+    });
+
     Horizon::Scripting::LuauVM luau;
-    if (luau.loadScript("print(\"Luau VM online\")"))
-        luau.execute();
 
     auto part = std::make_shared<Horizon::Part>();
     part->Name = "TestCube";
