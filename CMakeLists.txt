@@ -57,8 +57,9 @@ target_include_directories(HorizonShared INTERFACE
 target_compile_features(HorizonShared INTERFACE cxx_std_20)
 
 add_library(HorizonCore STATIC
-    engine/src/Instance.cpp
-    engine/src/Part.cpp
+    engine/src/core/Scene.cpp
+    engine/src/object/Instance.cpp
+    engine/src/object/Part.cpp
     engine/src/events/HorizonEvent.cpp
     engine/src/events/HorizonFunction.cpp
     engine/src/renderer/Camera.cpp
@@ -68,7 +69,6 @@ add_library(HorizonCore STATIC
     engine/src/services/HorizonStore.cpp
     engine/src/services/LoopService.cpp
     engine/src/services/MessagingService.cpp
-    engine/src/services/Scene.cpp
     engine/src/services/SharedStorage.cpp
     engine/src/services/ServerScripts.cpp
     engine/src/services/SoundService.cpp
