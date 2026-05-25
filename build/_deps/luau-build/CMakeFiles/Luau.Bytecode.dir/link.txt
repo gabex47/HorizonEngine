@@ -1,0 +1,2 @@
+/usr/bin/ar qc libLuau.Bytecode.a CMakeFiles/Luau.Bytecode.dir/Bytecode/src/BytecodeBuilder.cpp.o CMakeFiles/Luau.Bytecode.dir/Bytecode/src/BytecodeGraph.cpp.o
+/usr/bin/ranlib libLuau.Bytecode.a

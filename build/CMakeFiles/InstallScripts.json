@@ -1,0 +1,15 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/rianjeph/Horizon Engine/build/cmake_install.cmake",
+		"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-build/cmake_install.cmake",
+		"/Users/rianjeph/Horizon Engine/build/_deps/glfw-build/cmake_install.cmake",
+		"/Users/rianjeph/Horizon Engine/build/_deps/glfw-build/src/cmake_install.cmake",
+		"/Users/rianjeph/Horizon Engine/build/_deps/glad-build/cmake_install.cmake",
+		"/Users/rianjeph/Horizon Engine/build/_deps/glm-build/cmake_install.cmake",
+		"/Users/rianjeph/Horizon Engine/build/_deps/glm-build/glm/cmake_install.cmake",
+		"/Users/rianjeph/Horizon Engine/build/scripting/cmake_install.cmake",
+		"/Users/rianjeph/Horizon Engine/build/_deps/luau-build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

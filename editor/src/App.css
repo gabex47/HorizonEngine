@@ -1,0 +1,125 @@
+:root {
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #e6e8ee;
+  background: #111216;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+button {
+  font: inherit;
+}
+
+.editor-shell {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  width: 100vw;
+  height: 100vh;
+  background: #18191d;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 18px 14px;
+  background: #101114;
+  border-right: 1px solid #282a31;
+}
+
+.brand {
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar-item {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 6px;
+  color: #c4c8d0;
+  background: transparent;
+  text-align: left;
+  cursor: default;
+}
+
+.sidebar-item:first-child {
+  color: #ffffff;
+  background: #23252c;
+}
+
+.viewport-panel {
+  min-width: 0;
+  padding: 18px;
+  background: #18191d;
+}
+
+.viewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #2d3037;
+  border-radius: 8px;
+  background: #030303;
+}
+
+.viewport::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.28;
+}
+
+@media (max-width: 680px) {
+  .editor-shell {
+    grid-template-columns: 152px minmax(0, 1fr);
+  }
+
+  .sidebar {
+    padding: 14px 10px;
+  }
+
+  .brand {
+    padding: 0 8px;
+    font-size: 0.86rem;
+  }
+
+  .sidebar-item {
+    padding: 0 10px;
+  }
+}

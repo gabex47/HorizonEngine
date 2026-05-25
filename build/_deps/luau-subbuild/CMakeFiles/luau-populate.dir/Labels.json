@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/rianjeph/Horizon Engine/build/_deps/luau-subbuild/CMakeFiles/luau-populate"
+		},
+		{
+			"file" : "/Users/rianjeph/Horizon Engine/build/_deps/luau-subbuild/CMakeFiles/luau-populate.rule"
+		},
+		{
+			"file" : "/Users/rianjeph/Horizon Engine/build/_deps/luau-subbuild/CMakeFiles/luau-populate-complete.rule"
+		},
+		{
+			"file" : "/Users/rianjeph/Horizon Engine/build/_deps/luau-subbuild/luau-populate-prefix/src/luau-populate-stamp/luau-populate-build.rule"
+		},
+		{
+			"file" : "/Users/rianjeph/Horizon Engine/build/_deps/luau-subbuild/luau-populate-prefix/src/luau-populate-stamp/luau-populate-configure.rule"
+		},
+		{
+			"file" : "/Users/rianjeph/Horizon Engine/build/_deps/luau-subbuild/luau-populate-prefix/src/luau-populate-stamp/luau-populate-download.rule"
+		},
+		{
+			"file" : "/Users/rianjeph/Horizon Engine/build/_deps/luau-subbuild/luau-populate-prefix/src/luau-populate-stamp/luau-populate-install.rule"
+		},
+		{
+			"file" : "/Users/rianjeph/Horizon Engine/build/_deps/luau-subbuild/luau-populate-prefix/src/luau-populate-stamp/luau-populate-mkdir.rule"
+		},
+		{
+			"file" : "/Users/rianjeph/Horizon Engine/build/_deps/luau-subbuild/luau-populate-prefix/src/luau-populate-stamp/luau-populate-patch_disconnected.rule"
+		},
+		{
+			"file" : "/Users/rianjeph/Horizon Engine/build/_deps/luau-subbuild/luau-populate-prefix/src/luau-populate-stamp/luau-populate-test.rule"
+		},
+		{
+			"file" : "/Users/rianjeph/Horizon Engine/build/_deps/luau-subbuild/luau-populate-prefix/src/luau-populate-stamp/luau-populate-update_disconnected.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"luau-populate"
+		],
+		"name" : "luau-populate"
+	}
+}
