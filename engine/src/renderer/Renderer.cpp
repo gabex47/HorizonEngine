@@ -45,6 +45,11 @@ constexpr float kCubeVertices[] = {
 } // namespace
 namespace Horizon {
 
+float Viewport::AspectRatio() const
+{
+    return static_cast<float>(Width) / static_cast<float>(Height == 0 ? 1 : Height);
+}
+
 Renderer::~Renderer()
 {
     Shutdown();
@@ -65,6 +70,7 @@ bool Renderer::Init(int width, int height, const char* title)
 
     glfwMakeContextCurrent(window);
     glfwSwapInterval(1);
+    input.Attach(window);
 
     glEnable(GL_DEPTH_TEST);
     if (!shader.Load(kVertexShader, kFragmentShader))
@@ -90,17 +96,26 @@ void Renderer::PollEvents() const
     glfwPollEvents();
 }
 
+void Renderer::Update(float deltaTime)
+{
+    input.Update();
+    editorCamera.Update(deltaTime, input);
+    input.EndFrame();
+}
+
 void Renderer::RenderPart(Part& part)
 {
-    int width = 1, height = 1;
-    glfwGetFramebufferSize(window, &width, &height);
-    const float aspect = static_cast<float>(width) / static_cast<float>(height == 0 ? 1 : height);
+    UpdateSceneViewport();
+    RenderPart(part, GetSceneViewMatrix(), GetSceneProjectionMatrix());
+}
 
+void Renderer::RenderPart(Part& part, const glm::mat4& view, const glm::mat4& projection)
+{
     glm::mat4 model(1.0f);
     model = glm::translate(model, glm::vec3(part.Position.X, part.Position.Y, part.Position.Z));
     model = glm::scale(model, glm::vec3(part.Size.X, part.Size.Y, part.Size.Z));
 
-    const glm::mat4 mvp = camera.GetProjectionMatrix(aspect) * camera.GetViewMatrix() * model;
+    const glm::mat4 mvp = projection * view * model;
     const glm::vec3 color(part.Color.R / 255.0f, part.Color.G / 255.0f, part.Color.B / 255.0f);
 
     shader.Use();
@@ -112,17 +127,40 @@ void Renderer::RenderPart(Part& part)
 
 void Renderer::RenderScene()
 {
-    int width = 1, height = 1;
-    glfwGetFramebufferSize(window, &width, &height);
-    glViewport(0, 0, width, height);
+    UpdateSceneViewport();
+    const glm::mat4 view = GetSceneViewMatrix();
+    const glm::mat4 projection = GetSceneProjectionMatrix();
+
+    glViewport(sceneViewport.X, sceneViewport.Y, sceneViewport.Width, sceneViewport.Height);
     glClearColor(0.06f, 0.06f, 0.08f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     for (const auto& child : Scene::Get().GetChildren())
         if (auto part = std::dynamic_pointer_cast<Part>(child))
-            RenderPart(*part);
+            RenderPart(*part, view, projection);
 
     glfwSwapBuffers(window);
+}
+
+void Renderer::UpdateSceneViewport()
+{
+    glfwGetFramebufferSize(window, &sceneViewport.Width, &sceneViewport.Height);
+    sceneViewport.X = 0;
+    sceneViewport.Y = 0;
+}
+
+glm::mat4 Renderer::GetSceneViewMatrix() const
+{
+    if (sceneCameraMode == SceneCameraMode::Game)
+        return gameCamera.GetViewMatrix();
+    return editorCamera.GetViewMatrix();
+}
+
+glm::mat4 Renderer::GetSceneProjectionMatrix() const
+{
+    if (sceneCameraMode == SceneCameraMode::Game)
+        return gameCamera.GetProjectionMatrix(sceneViewport.AspectRatio());
+    return editorCamera.GetProjectionMatrix(sceneViewport.AspectRatio());
 }
 
 void Renderer::Shutdown()

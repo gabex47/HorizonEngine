@@ -40,6 +40,7 @@ int Application::Run()
 
         renderer.PollEvents();
         engine.Tick(delta.count());
+        renderer.Update(delta.count());
         renderer.RenderScene();
 
         ++frames;

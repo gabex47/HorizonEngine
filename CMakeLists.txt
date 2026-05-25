@@ -64,6 +64,8 @@ add_library(HorizonCore STATIC
     engine/src/events/HorizonEvent.cpp
     engine/src/events/HorizonFunction.cpp
     engine/src/renderer/Camera.cpp
+    engine/src/renderer/EditorCamera.cpp
+    engine/src/renderer/Input.cpp
     engine/src/renderer/Renderer.cpp
     engine/src/renderer/Shader.cpp
     engine/src/services/BindableEvent.cpp
