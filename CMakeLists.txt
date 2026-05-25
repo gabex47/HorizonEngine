@@ -57,6 +57,7 @@ target_include_directories(HorizonShared INTERFACE
 target_compile_features(HorizonShared INTERFACE cxx_std_20)
 
 add_library(HorizonCore STATIC
+    engine/src/core/Engine.cpp
     engine/src/core/Scene.cpp
     engine/src/object/Instance.cpp
     engine/src/object/Part.cpp
@@ -97,7 +98,10 @@ endif()
 
 add_subdirectory(scripting)
 
-add_executable(HorizonEngine engine/src/main.cpp)
+add_executable(HorizonEngine
+    engine/src/core/Application.cpp
+    engine/src/main.cpp
+)
 target_compile_features(HorizonEngine PRIVATE cxx_std_20)
 target_link_libraries(HorizonEngine PRIVATE
     HorizonShared
