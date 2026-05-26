@@ -1,5 +1,8 @@
 #include "Input.h"
 
+#include <imgui.h>
+#include <imgui_impl_glfw.h>
+
 #define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
 
@@ -15,6 +18,7 @@ int toGlfwKey(Horizon::Key key)
     case Horizon::Key::D: return GLFW_KEY_D;
     case Horizon::Key::Q: return GLFW_KEY_Q;
     case Horizon::Key::E: return GLFW_KEY_E;
+    case Horizon::Key::Tab: return GLFW_KEY_TAB;
     case Horizon::Key::LeftShift: return GLFW_KEY_LEFT_SHIFT;
     case Horizon::Key::RightShift: return GLFW_KEY_RIGHT_SHIFT;
     case Horizon::Key::Escape: return GLFW_KEY_ESCAPE;
@@ -97,8 +101,11 @@ bool Input::IsCursorCaptured() const
     return cursorCaptured_;
 }
 
-void Input::ScrollCallback(GLFWwindow* window, double, double yOffset)
+void Input::ScrollCallback(GLFWwindow* window, double xOffset, double yOffset)
 {
+    if (ImGui::GetCurrentContext())
+        ImGui_ImplGlfw_ScrollCallback(window, xOffset, yOffset);
+
     auto* input = static_cast<Input*>(glfwGetWindowUserPointer(window));
     if (input)
         input->scrollY_ += static_cast<float>(yOffset);

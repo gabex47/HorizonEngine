@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/rianjeph/Horizon Engine/engine/src/core/Application.cpp" "CMakeFiles/HorizonEngine.dir/engine/src/core/Application.cpp.o" "gcc" "CMakeFiles/HorizonEngine.dir/engine/src/core/Application.cpp.o.d"
   "/Users/rianjeph/Horizon Engine/engine/src/main.cpp" "CMakeFiles/HorizonEngine.dir/engine/src/main.cpp.o" "gcc" "CMakeFiles/HorizonEngine.dir/engine/src/main.cpp.o.d"
   )
 

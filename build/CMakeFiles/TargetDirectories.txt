@@ -1,3 +1,4 @@
+/Users/rianjeph/Horizon Engine/build/CMakeFiles/imgui.dir
 /Users/rianjeph/Horizon Engine/build/CMakeFiles/HorizonCore.dir
 /Users/rianjeph/Horizon Engine/build/CMakeFiles/HorizonEngine.dir
 /Users/rianjeph/Horizon Engine/build/CMakeFiles/edit_cache.dir

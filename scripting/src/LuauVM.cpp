@@ -4,6 +4,7 @@
 #include "Part.h"
 #include "events/HorizonEvent.h"
 #include "events/HorizonFunction.h"
+#include "editor/EditorUI.h"
 #include "services/BindableEvent.h"
 #include "services/HorizonStore.h"
 #include "services/LoopService.h"
@@ -81,6 +82,35 @@ print("TagService online")
 using InstanceStore = std::vector<std::shared_ptr<Horizon::Instance>>;
 using CallbackRefStore = std::vector<int>;
 using TweenHandle = std::shared_ptr<Horizon::Tween>;
+
+Horizon::EditorUI* editorRef = nullptr;
+
+int luaPrint(lua_State* L)
+{
+    std::string message;
+    const int count = lua_gettop(L);
+    for (int i = 1; i <= count; ++i)
+    {
+        size_t length = 0;
+        const char* value = luaL_tolstring(L, i, &length);
+        if (i > 1)
+            message += "\t";
+        if (value)
+            message.append(value, length);
+        lua_pop(L, 1);
+    }
+
+    std::cout << message << std::endl;
+    if (editorRef)
+        editorRef->PushLog(message);
+    return 0;
+}
+
+void registerPrintHandler(lua_State* L)
+{
+    lua_pushcfunction(L, luaPrint, "print");
+    lua_setglobal(L, "print");
+}
 
 Horizon::Instance* checkInstance(lua_State* L, int index)
 {
@@ -1108,6 +1138,7 @@ LuauVM::LuauVM()
     if (impl_->state)
     {
         luaL_openlibs(impl_->state);
+        registerPrintHandler(impl_->state);
         registerInstanceBindings(impl_->state, &impl_->instances, &impl_->callbackRefs);
 
         if (loadScript(kServicesSmokeTest))
@@ -1131,6 +1162,11 @@ LuauVM::~LuauVM()
 LuauVM::LuauVM(LuauVM&&) noexcept = default;
 
 LuauVM& LuauVM::operator=(LuauVM&&) noexcept = default;
+
+void LuauVM::SetEditorUI(Horizon::EditorUI* ui)
+{
+    editorRef = ui;
+}
 
 bool LuauVM::loadScript(const std::string& source)
 {

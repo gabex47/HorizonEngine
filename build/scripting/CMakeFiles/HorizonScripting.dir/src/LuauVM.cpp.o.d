@@ -801,6 +801,7 @@ scripting/CMakeFiles/HorizonScripting.dir/src/LuauVM.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__bit/rotate.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/optional \
   /Users/rianjeph/Horizon\ Engine/engine/src/Instance.h \
+  /Users/rianjeph/Horizon\ Engine/engine/src/object/Instance.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/vector \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__vector/comparison.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/vector.h \
@@ -902,6 +903,7 @@ scripting/CMakeFiles/HorizonScripting.dir/src/LuauVM.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__locale_dir/wstring_convert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdarg \
   /Users/rianjeph/Horizon\ Engine/engine/src/Part.h \
+  /Users/rianjeph/Horizon\ Engine/engine/src/object/Part.h \
   /Users/rianjeph/Horizon\ Engine/shared/include/Horizon/Types.h \
   /Users/rianjeph/Horizon\ Engine/engine/src/events/HorizonEvent.h \
   /Users/rianjeph/Horizon\ Engine/engine/src/events/../Instance.h \
@@ -932,12 +934,15 @@ scripting/CMakeFiles/HorizonScripting.dir/src/LuauVM.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/bind_back.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/bind_front.h \
   /Users/rianjeph/Horizon\ Engine/engine/src/events/HorizonFunction.h \
+  /Users/rianjeph/Horizon\ Engine/engine/src/editor/EditorUI.h \
   /Users/rianjeph/Horizon\ Engine/engine/src/services/BindableEvent.h \
   /Users/rianjeph/Horizon\ Engine/engine/src/services/../Instance.h \
   /Users/rianjeph/Horizon\ Engine/engine/src/services/HorizonStore.h \
   /Users/rianjeph/Horizon\ Engine/engine/src/services/LoopService.h \
   /Users/rianjeph/Horizon\ Engine/engine/src/services/MessagingService.h \
   /Users/rianjeph/Horizon\ Engine/engine/src/services/Scene.h \
+  /Users/rianjeph/Horizon\ Engine/engine/src/core/Scene.h \
+  /Users/rianjeph/Horizon\ Engine/engine/src/core/../Instance.h \
   /Users/rianjeph/Horizon\ Engine/engine/src/services/ServerScripts.h \
   /Users/rianjeph/Horizon\ Engine/engine/src/services/SharedStorage.h \
   /Users/rianjeph/Horizon\ Engine/engine/src/services/SoundService.h \

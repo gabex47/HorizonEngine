@@ -3,6 +3,10 @@
 #include <memory>
 #include <string>
 
+namespace Horizon {
+class EditorUI;
+}
+
 namespace Horizon::Scripting {
 
 class LuauVM {
@@ -14,6 +18,8 @@ public:
     LuauVM& operator=(const LuauVM&) = delete;
     LuauVM(LuauVM&&) noexcept;
     LuauVM& operator=(LuauVM&&) noexcept;
+
+    static void SetEditorUI(Horizon::EditorUI* ui);
 
     bool loadScript(const std::string& source);
     bool execute();

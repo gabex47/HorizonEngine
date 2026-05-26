@@ -50,6 +50,32 @@ FetchContent_MakeAvailable(miniaudio)
 add_library(miniaudio INTERFACE)
 target_include_directories(miniaudio INTERFACE ${miniaudio_SOURCE_DIR})
 
+FetchContent_Declare(
+    imgui
+    GIT_REPOSITORY https://github.com/ocornut/imgui.git
+    GIT_TAG        docking
+)
+FetchContent_MakeAvailable(imgui)
+
+add_library(imgui STATIC
+    ${imgui_SOURCE_DIR}/imgui.cpp
+    ${imgui_SOURCE_DIR}/imgui_draw.cpp
+    ${imgui_SOURCE_DIR}/imgui_tables.cpp
+    ${imgui_SOURCE_DIR}/imgui_widgets.cpp
+    ${imgui_SOURCE_DIR}/imgui_demo.cpp
+    ${imgui_SOURCE_DIR}/backends/imgui_impl_glfw.cpp
+    ${imgui_SOURCE_DIR}/backends/imgui_impl_opengl3.cpp
+)
+target_include_directories(imgui PUBLIC
+    ${imgui_SOURCE_DIR}
+    ${imgui_SOURCE_DIR}/backends
+)
+target_compile_definitions(imgui PRIVATE GL_SILENCE_DEPRECATION)
+target_link_libraries(imgui PRIVATE
+    glfw
+    OpenGL::GL
+)
+
 add_library(HorizonShared INTERFACE)
 target_include_directories(HorizonShared INTERFACE
     ${CMAKE_CURRENT_SOURCE_DIR}/shared/include
@@ -65,9 +91,12 @@ add_library(HorizonCore STATIC
     engine/src/events/HorizonFunction.cpp
     engine/src/renderer/Camera.cpp
     engine/src/renderer/EditorCamera.cpp
+    engine/src/renderer/Framebuffer.cpp
     engine/src/renderer/Input.cpp
     engine/src/renderer/Renderer.cpp
     engine/src/renderer/Shader.cpp
+    engine/src/editor/EditorUI.cpp
+    engine/src/editor/EditorUIPanels.cpp
     engine/src/services/BindableEvent.cpp
     engine/src/services/HorizonStore.cpp
     engine/src/services/LoopService.cpp
@@ -79,8 +108,12 @@ add_library(HorizonCore STATIC
     engine/src/services/TweenService.cpp
 )
 target_include_directories(HorizonCore PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/engine/src)
+target_include_directories(HorizonCore PRIVATE
+    ${imgui_SOURCE_DIR}
+    ${imgui_SOURCE_DIR}/backends
+)
 target_compile_features(HorizonCore PUBLIC cxx_std_20)
-target_link_libraries(HorizonCore PUBLIC
+target_link_libraries(HorizonCore PRIVATE
     HorizonShared
     glfw
     glm::glm
@@ -90,7 +123,7 @@ target_link_libraries(HorizonCore PUBLIC
 )
 
 if(APPLE)
-    target_link_libraries(HorizonCore PUBLIC
+    target_link_libraries(HorizonCore PRIVATE
         "-framework AudioToolbox"
         "-framework AudioUnit"
         "-framework CoreAudio"
@@ -108,6 +141,7 @@ target_compile_features(HorizonEngine PRIVATE cxx_std_20)
 target_link_libraries(HorizonEngine PRIVATE
     HorizonShared
     HorizonScripting
+    imgui
     SDL3::SDL3
 )
 

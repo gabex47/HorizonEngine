@@ -72,10 +72,24 @@ include CMakeFiles/HorizonEngine.dir/flags.make
 CMakeFiles/HorizonEngine.dir/codegen:
 .PHONY : CMakeFiles/HorizonEngine.dir/codegen
 
+CMakeFiles/HorizonEngine.dir/engine/src/core/Application.cpp.o: CMakeFiles/HorizonEngine.dir/flags.make
+CMakeFiles/HorizonEngine.dir/engine/src/core/Application.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/core/Application.cpp
+CMakeFiles/HorizonEngine.dir/engine/src/core/Application.cpp.o: CMakeFiles/HorizonEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/HorizonEngine.dir/engine/src/core/Application.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonEngine.dir/engine/src/core/Application.cpp.o -MF CMakeFiles/HorizonEngine.dir/engine/src/core/Application.cpp.o.d -o CMakeFiles/HorizonEngine.dir/engine/src/core/Application.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/core/Application.cpp"
+
+CMakeFiles/HorizonEngine.dir/engine/src/core/Application.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/HorizonEngine.dir/engine/src/core/Application.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/rianjeph/Horizon Engine/engine/src/core/Application.cpp" > CMakeFiles/HorizonEngine.dir/engine/src/core/Application.cpp.i
+
+CMakeFiles/HorizonEngine.dir/engine/src/core/Application.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HorizonEngine.dir/engine/src/core/Application.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/rianjeph/Horizon Engine/engine/src/core/Application.cpp" -o CMakeFiles/HorizonEngine.dir/engine/src/core/Application.cpp.s
+
 CMakeFiles/HorizonEngine.dir/engine/src/main.cpp.o: CMakeFiles/HorizonEngine.dir/flags.make
 CMakeFiles/HorizonEngine.dir/engine/src/main.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/main.cpp
 CMakeFiles/HorizonEngine.dir/engine/src/main.cpp.o: CMakeFiles/HorizonEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/HorizonEngine.dir/engine/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HorizonEngine.dir/engine/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonEngine.dir/engine/src/main.cpp.o -MF CMakeFiles/HorizonEngine.dir/engine/src/main.cpp.o.d -o CMakeFiles/HorizonEngine.dir/engine/src/main.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/main.cpp"
 
 CMakeFiles/HorizonEngine.dir/engine/src/main.cpp.i: cmake_force
@@ -88,26 +102,29 @@ CMakeFiles/HorizonEngine.dir/engine/src/main.cpp.s: cmake_force
 
 # Object files for target HorizonEngine
 HorizonEngine_OBJECTS = \
+"CMakeFiles/HorizonEngine.dir/engine/src/core/Application.cpp.o" \
 "CMakeFiles/HorizonEngine.dir/engine/src/main.cpp.o"
 
 # External object files for target HorizonEngine
 HorizonEngine_EXTERNAL_OBJECTS =
 
+HorizonEngine: CMakeFiles/HorizonEngine.dir/engine/src/core/Application.cpp.o
 HorizonEngine: CMakeFiles/HorizonEngine.dir/engine/src/main.cpp.o
 HorizonEngine: CMakeFiles/HorizonEngine.dir/build.make
 HorizonEngine: scripting/libHorizonScripting.a
+HorizonEngine: libimgui.a
 HorizonEngine: /opt/homebrew/lib/libSDL3.0.dylib
 HorizonEngine: libHorizonCore.a
-HorizonEngine: _deps/glfw-build/src/libglfw3.a
 HorizonEngine: _deps/glm-build/glm/libglm.a
-HorizonEngine: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework
 HorizonEngine: _deps/luau-build/libLuau.Compiler.a
 HorizonEngine: _deps/luau-build/libLuau.Ast.a
 HorizonEngine: _deps/luau-build/libLuau.Bytecode.a
 HorizonEngine: _deps/luau-build/libLuau.VM.a
 HorizonEngine: _deps/luau-build/libLuau.Common.a
+HorizonEngine: _deps/glfw-build/src/libglfw3.a
+HorizonEngine: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework
 HorizonEngine: CMakeFiles/HorizonEngine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable HorizonEngine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable HorizonEngine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/HorizonEngine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

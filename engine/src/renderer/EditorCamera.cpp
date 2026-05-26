@@ -16,24 +16,18 @@ EditorCamera::EditorCamera()
     UpdateVectors();
 }
 
-void EditorCamera::Update(float deltaTime, Input& input)
+void EditorCamera::Update(float deltaTime, Input& input, bool lookEnabled)
 {
-    speed_ = std::clamp(speed_ + input.GetScroll() * 0.75f, 0.5f, 100.0f);
-    if (input.GetMouseButton(MouseButton::Right))
-        lookMode_ = true;
-    if (input.GetKey(Key::Escape))
-        lookMode_ = false;
+    if (!lookEnabled)
+        return;
 
-    input.SetCursorCaptured(lookMode_);
+    speed_ = std::clamp(speed_ + input.GetScroll() * 0.75f, 0.5f, 100.0f);
     HandleMouse(input);
     HandleKeyboard(deltaTime, input);
 }
 
 void EditorCamera::HandleKeyboard(float deltaTime, const Input& input)
 {
-    if (!lookMode_)
-        return;
-
     const float multiplier = input.GetKey(Key::LeftShift) || input.GetKey(Key::RightShift) ? 3.0f : 1.0f;
     const float velocity = speed_ * multiplier * std::max(deltaTime, 0.0f);
     glm::vec3 direction(0.0f);
@@ -51,9 +45,6 @@ void EditorCamera::HandleKeyboard(float deltaTime, const Input& input)
 
 void EditorCamera::HandleMouse(Input& input)
 {
-    if (!lookMode_)
-        return;
-
     const glm::vec2 delta = input.GetMouseDelta() * sensitivity_;
     yaw_ += delta.x;
     pitch_ = std::clamp(pitch_ + delta.y, -89.0f, 89.0f);
@@ -70,25 +61,13 @@ glm::mat4 EditorCamera::GetProjectionMatrix(float aspectRatio) const
     return glm::perspective(glm::radians(fov_), aspectRatio, 0.1f, 1000.0f);
 }
 
-void EditorCamera::FocusSelected()
-{
-    // TODO: focus the Scene View camera on the selected object.
-}
+void EditorCamera::FocusSelected() {}
 
-void EditorCamera::OrbitMode()
-{
-    // TODO: add scene-object orbit controls.
-}
+void EditorCamera::OrbitMode() {}
 
-void EditorCamera::Bookmarks()
-{
-    // TODO: add saved editor camera bookmarks.
-}
+void EditorCamera::Bookmarks() {}
 
-void EditorCamera::FlyMode()
-{
-    // TODO: expose fly-mode settings for editor navigation.
-}
+void EditorCamera::FlyMode() {}
 
 void EditorCamera::UpdateVectors()
 {

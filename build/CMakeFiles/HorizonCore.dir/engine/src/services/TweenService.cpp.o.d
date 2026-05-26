@@ -2,6 +2,7 @@ CMakeFiles/HorizonCore.dir/engine/src/services/TweenService.cpp.o: \
   /Users/rianjeph/Horizon\ Engine/engine/src/services/TweenService.cpp \
   /Users/rianjeph/Horizon\ Engine/engine/src/services/TweenService.h \
   /Users/rianjeph/Horizon\ Engine/engine/src/services/../Instance.h \
+  /Users/rianjeph/Horizon\ Engine/engine/src/services/../object/Instance.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/memory \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config_site \
@@ -910,4 +911,5 @@ CMakeFiles/HorizonCore.dir/engine/src/services/TweenService.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/ranges_iterator_traits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__node_handle \
   /Users/rianjeph/Horizon\ Engine/engine/src/services/../Part.h \
+  /Users/rianjeph/Horizon\ Engine/engine/src/services/../object/Part.h \
   /Users/rianjeph/Horizon\ Engine/shared/include/Horizon/Types.h

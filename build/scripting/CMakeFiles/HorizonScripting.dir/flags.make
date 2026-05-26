@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/Users/rianjeph/Horizon Engine/scripting/src" -I"/Users/rianjeph/Horizon Engine/engine/src" -I"/Users/rianjeph/Horizon Engine/shared/include" -I"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include" -I"/Users/rianjeph/Horizon Engine/build/_deps/glm-src" -I"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src" -I"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include" -I"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Compiler/include" -I"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Ast/include" -I"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Common/include" -I"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Bytecode/include" -I"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/VM/include" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
+CXX_INCLUDES = -I"/Users/rianjeph/Horizon Engine/scripting/src" -I"/Users/rianjeph/Horizon Engine/engine/src" -I"/Users/rianjeph/Horizon Engine/shared/include" -I"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Compiler/include" -I"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Ast/include" -I"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Common/include" -I"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Bytecode/include" -I"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/VM/include"
 
 CXX_FLAGSarm64 = -g -std=gnu++20 -arch arm64 -Wall -Wextra -Wpedantic
 

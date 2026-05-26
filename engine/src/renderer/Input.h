@@ -13,6 +13,7 @@ enum class Key {
     D,
     Q,
     E,
+    Tab,
     LeftShift,
     RightShift,
     Escape

@@ -11,7 +11,7 @@ class EditorCamera final {
 public:
     EditorCamera();
 
-    void Update(float deltaTime, Input& input);
+    void Update(float deltaTime, Input& input, bool lookEnabled);
     void HandleKeyboard(float deltaTime, const Input& input);
     void HandleMouse(Input& input);
     glm::mat4 GetViewMatrix() const;
@@ -35,7 +35,6 @@ private:
     float speed_ = 8.0f;
     float sensitivity_ = 0.1f;
     float fov_ = 60.0f;
-    bool lookMode_ = false;
 };
 
 } // namespace Horizon

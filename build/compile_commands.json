@@ -1,109 +1,193 @@
 [
 {
   "directory": "/Users/rianjeph/Horizon Engine/build",
-  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/Instance.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/Instance.cpp\"",
-  "file": "/Users/rianjeph/Horizon Engine/engine/src/Instance.cpp",
-  "output": "CMakeFiles/HorizonCore.dir/engine/src/Instance.cpp.o"
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/imgui.dir/_deps/imgui-src/imgui.cpp.o -c \"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/imgui.cpp\"",
+  "file": "/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/imgui.cpp",
+  "output": "CMakeFiles/imgui.dir/_deps/imgui-src/imgui.cpp.o"
 },
 {
   "directory": "/Users/rianjeph/Horizon Engine/build",
-  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/Part.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/Part.cpp\"",
-  "file": "/Users/rianjeph/Horizon Engine/engine/src/Part.cpp",
-  "output": "CMakeFiles/HorizonCore.dir/engine/src/Part.cpp.o"
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/imgui.dir/_deps/imgui-src/imgui_draw.cpp.o -c \"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/imgui_draw.cpp\"",
+  "file": "/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/imgui_draw.cpp",
+  "output": "CMakeFiles/imgui.dir/_deps/imgui-src/imgui_draw.cpp.o"
 },
 {
   "directory": "/Users/rianjeph/Horizon Engine/build",
-  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/events/HorizonEvent.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/events/HorizonEvent.cpp\"",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/imgui.dir/_deps/imgui-src/imgui_tables.cpp.o -c \"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/imgui_tables.cpp\"",
+  "file": "/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/imgui_tables.cpp",
+  "output": "CMakeFiles/imgui.dir/_deps/imgui-src/imgui_tables.cpp.o"
+},
+{
+  "directory": "/Users/rianjeph/Horizon Engine/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/imgui.dir/_deps/imgui-src/imgui_widgets.cpp.o -c \"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/imgui_widgets.cpp\"",
+  "file": "/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/imgui_widgets.cpp",
+  "output": "CMakeFiles/imgui.dir/_deps/imgui-src/imgui_widgets.cpp.o"
+},
+{
+  "directory": "/Users/rianjeph/Horizon Engine/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/imgui.dir/_deps/imgui-src/imgui_demo.cpp.o -c \"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/imgui_demo.cpp\"",
+  "file": "/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/imgui_demo.cpp",
+  "output": "CMakeFiles/imgui.dir/_deps/imgui-src/imgui_demo.cpp.o"
+},
+{
+  "directory": "/Users/rianjeph/Horizon Engine/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/imgui.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.o -c \"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends/imgui_impl_glfw.cpp\"",
+  "file": "/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends/imgui_impl_glfw.cpp",
+  "output": "CMakeFiles/imgui.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.o"
+},
+{
+  "directory": "/Users/rianjeph/Horizon Engine/build",
+  "command": "/usr/bin/c++ -DGL_SILENCE_DEPRECATION -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -arch arm64 -o CMakeFiles/imgui.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.o -c \"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends/imgui_impl_opengl3.cpp\"",
+  "file": "/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends/imgui_impl_opengl3.cpp",
+  "output": "CMakeFiles/imgui.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.o"
+},
+{
+  "directory": "/Users/rianjeph/Horizon Engine/build",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/core/Engine.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/core/Engine.cpp\"",
+  "file": "/Users/rianjeph/Horizon Engine/engine/src/core/Engine.cpp",
+  "output": "CMakeFiles/HorizonCore.dir/engine/src/core/Engine.cpp.o"
+},
+{
+  "directory": "/Users/rianjeph/Horizon Engine/build",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/core/Scene.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/core/Scene.cpp\"",
+  "file": "/Users/rianjeph/Horizon Engine/engine/src/core/Scene.cpp",
+  "output": "CMakeFiles/HorizonCore.dir/engine/src/core/Scene.cpp.o"
+},
+{
+  "directory": "/Users/rianjeph/Horizon Engine/build",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/object/Instance.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/object/Instance.cpp\"",
+  "file": "/Users/rianjeph/Horizon Engine/engine/src/object/Instance.cpp",
+  "output": "CMakeFiles/HorizonCore.dir/engine/src/object/Instance.cpp.o"
+},
+{
+  "directory": "/Users/rianjeph/Horizon Engine/build",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/object/Part.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/object/Part.cpp\"",
+  "file": "/Users/rianjeph/Horizon Engine/engine/src/object/Part.cpp",
+  "output": "CMakeFiles/HorizonCore.dir/engine/src/object/Part.cpp.o"
+},
+{
+  "directory": "/Users/rianjeph/Horizon Engine/build",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/events/HorizonEvent.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/events/HorizonEvent.cpp\"",
   "file": "/Users/rianjeph/Horizon Engine/engine/src/events/HorizonEvent.cpp",
   "output": "CMakeFiles/HorizonCore.dir/engine/src/events/HorizonEvent.cpp.o"
 },
 {
   "directory": "/Users/rianjeph/Horizon Engine/build",
-  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/events/HorizonFunction.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/events/HorizonFunction.cpp\"",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/events/HorizonFunction.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/events/HorizonFunction.cpp\"",
   "file": "/Users/rianjeph/Horizon Engine/engine/src/events/HorizonFunction.cpp",
   "output": "CMakeFiles/HorizonCore.dir/engine/src/events/HorizonFunction.cpp.o"
 },
 {
   "directory": "/Users/rianjeph/Horizon Engine/build",
-  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/renderer/Camera.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/renderer/Camera.cpp\"",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/renderer/Camera.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/renderer/Camera.cpp\"",
   "file": "/Users/rianjeph/Horizon Engine/engine/src/renderer/Camera.cpp",
   "output": "CMakeFiles/HorizonCore.dir/engine/src/renderer/Camera.cpp.o"
 },
 {
   "directory": "/Users/rianjeph/Horizon Engine/build",
-  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/renderer/Renderer.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/renderer/Renderer.cpp\"",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/renderer/EditorCamera.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/renderer/EditorCamera.cpp\"",
+  "file": "/Users/rianjeph/Horizon Engine/engine/src/renderer/EditorCamera.cpp",
+  "output": "CMakeFiles/HorizonCore.dir/engine/src/renderer/EditorCamera.cpp.o"
+},
+{
+  "directory": "/Users/rianjeph/Horizon Engine/build",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/renderer/Framebuffer.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/renderer/Framebuffer.cpp\"",
+  "file": "/Users/rianjeph/Horizon Engine/engine/src/renderer/Framebuffer.cpp",
+  "output": "CMakeFiles/HorizonCore.dir/engine/src/renderer/Framebuffer.cpp.o"
+},
+{
+  "directory": "/Users/rianjeph/Horizon Engine/build",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/renderer/Input.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/renderer/Input.cpp\"",
+  "file": "/Users/rianjeph/Horizon Engine/engine/src/renderer/Input.cpp",
+  "output": "CMakeFiles/HorizonCore.dir/engine/src/renderer/Input.cpp.o"
+},
+{
+  "directory": "/Users/rianjeph/Horizon Engine/build",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/renderer/Renderer.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/renderer/Renderer.cpp\"",
   "file": "/Users/rianjeph/Horizon Engine/engine/src/renderer/Renderer.cpp",
   "output": "CMakeFiles/HorizonCore.dir/engine/src/renderer/Renderer.cpp.o"
 },
 {
   "directory": "/Users/rianjeph/Horizon Engine/build",
-  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/renderer/Shader.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/renderer/Shader.cpp\"",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/renderer/Shader.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/renderer/Shader.cpp\"",
   "file": "/Users/rianjeph/Horizon Engine/engine/src/renderer/Shader.cpp",
   "output": "CMakeFiles/HorizonCore.dir/engine/src/renderer/Shader.cpp.o"
 },
 {
   "directory": "/Users/rianjeph/Horizon Engine/build",
-  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/services/BindableEvent.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/services/BindableEvent.cpp\"",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUI.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/editor/EditorUI.cpp\"",
+  "file": "/Users/rianjeph/Horizon Engine/engine/src/editor/EditorUI.cpp",
+  "output": "CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUI.cpp.o"
+},
+{
+  "directory": "/Users/rianjeph/Horizon Engine/build",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUIPanels.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/editor/EditorUIPanels.cpp\"",
+  "file": "/Users/rianjeph/Horizon Engine/engine/src/editor/EditorUIPanels.cpp",
+  "output": "CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUIPanels.cpp.o"
+},
+{
+  "directory": "/Users/rianjeph/Horizon Engine/build",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/services/BindableEvent.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/services/BindableEvent.cpp\"",
   "file": "/Users/rianjeph/Horizon Engine/engine/src/services/BindableEvent.cpp",
   "output": "CMakeFiles/HorizonCore.dir/engine/src/services/BindableEvent.cpp.o"
 },
 {
   "directory": "/Users/rianjeph/Horizon Engine/build",
-  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/services/HorizonStore.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/services/HorizonStore.cpp\"",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/services/HorizonStore.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/services/HorizonStore.cpp\"",
   "file": "/Users/rianjeph/Horizon Engine/engine/src/services/HorizonStore.cpp",
   "output": "CMakeFiles/HorizonCore.dir/engine/src/services/HorizonStore.cpp.o"
 },
 {
   "directory": "/Users/rianjeph/Horizon Engine/build",
-  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/services/LoopService.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/services/LoopService.cpp\"",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/services/LoopService.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/services/LoopService.cpp\"",
   "file": "/Users/rianjeph/Horizon Engine/engine/src/services/LoopService.cpp",
   "output": "CMakeFiles/HorizonCore.dir/engine/src/services/LoopService.cpp.o"
 },
 {
   "directory": "/Users/rianjeph/Horizon Engine/build",
-  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/services/MessagingService.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/services/MessagingService.cpp\"",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/services/MessagingService.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/services/MessagingService.cpp\"",
   "file": "/Users/rianjeph/Horizon Engine/engine/src/services/MessagingService.cpp",
   "output": "CMakeFiles/HorizonCore.dir/engine/src/services/MessagingService.cpp.o"
 },
 {
   "directory": "/Users/rianjeph/Horizon Engine/build",
-  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/services/Scene.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/services/Scene.cpp\"",
-  "file": "/Users/rianjeph/Horizon Engine/engine/src/services/Scene.cpp",
-  "output": "CMakeFiles/HorizonCore.dir/engine/src/services/Scene.cpp.o"
-},
-{
-  "directory": "/Users/rianjeph/Horizon Engine/build",
-  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/services/SharedStorage.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/services/SharedStorage.cpp\"",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/services/SharedStorage.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/services/SharedStorage.cpp\"",
   "file": "/Users/rianjeph/Horizon Engine/engine/src/services/SharedStorage.cpp",
   "output": "CMakeFiles/HorizonCore.dir/engine/src/services/SharedStorage.cpp.o"
 },
 {
   "directory": "/Users/rianjeph/Horizon Engine/build",
-  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/services/ServerScripts.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/services/ServerScripts.cpp\"",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/services/ServerScripts.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/services/ServerScripts.cpp\"",
   "file": "/Users/rianjeph/Horizon Engine/engine/src/services/ServerScripts.cpp",
   "output": "CMakeFiles/HorizonCore.dir/engine/src/services/ServerScripts.cpp.o"
 },
 {
   "directory": "/Users/rianjeph/Horizon Engine/build",
-  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/services/SoundService.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/services/SoundService.cpp\"",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/services/SoundService.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/services/SoundService.cpp\"",
   "file": "/Users/rianjeph/Horizon Engine/engine/src/services/SoundService.cpp",
   "output": "CMakeFiles/HorizonCore.dir/engine/src/services/SoundService.cpp.o"
 },
 {
   "directory": "/Users/rianjeph/Horizon Engine/build",
-  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/services/TagService.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/services/TagService.cpp\"",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/services/TagService.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/services/TagService.cpp\"",
   "file": "/Users/rianjeph/Horizon Engine/engine/src/services/TagService.cpp",
   "output": "CMakeFiles/HorizonCore.dir/engine/src/services/TagService.cpp.o"
 },
 {
   "directory": "/Users/rianjeph/Horizon Engine/build",
-  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/services/TweenService.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/services/TweenService.cpp\"",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -o CMakeFiles/HorizonCore.dir/engine/src/services/TweenService.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/services/TweenService.cpp\"",
   "file": "/Users/rianjeph/Horizon Engine/engine/src/services/TweenService.cpp",
   "output": "CMakeFiles/HorizonCore.dir/engine/src/services/TweenService.cpp.o"
 },
 {
   "directory": "/Users/rianjeph/Horizon Engine/build",
-  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/scripting/src\" -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Compiler/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Ast/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Common/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Bytecode/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/VM/include\" -I/opt/homebrew/include -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/HorizonEngine.dir/engine/src/main.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/main.cpp\"",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/scripting/src\" -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Compiler/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Ast/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Common/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Bytecode/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/VM/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I/opt/homebrew/include -g -std=gnu++20 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/HorizonEngine.dir/engine/src/core/Application.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/core/Application.cpp\"",
+  "file": "/Users/rianjeph/Horizon Engine/engine/src/core/Application.cpp",
+  "output": "CMakeFiles/HorizonEngine.dir/engine/src/core/Application.cpp.o"
+},
+{
+  "directory": "/Users/rianjeph/Horizon Engine/build",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/scripting/src\" -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Compiler/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Ast/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Common/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Bytecode/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/VM/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends\" -I/opt/homebrew/include -g -std=gnu++20 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/HorizonEngine.dir/engine/src/main.cpp.o -c \"/Users/rianjeph/Horizon Engine/engine/src/main.cpp\"",
   "file": "/Users/rianjeph/Horizon Engine/engine/src/main.cpp",
   "output": "CMakeFiles/HorizonEngine.dir/engine/src/main.cpp.o"
 },
@@ -241,7 +325,7 @@
 },
 {
   "directory": "/Users/rianjeph/Horizon Engine/build/scripting",
-  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/scripting/src\" -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/glm-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Compiler/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Ast/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Common/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Bytecode/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/VM/include\" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -g -std=gnu++20 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/HorizonScripting.dir/src/LuauVM.cpp.o -c \"/Users/rianjeph/Horizon Engine/scripting/src/LuauVM.cpp\"",
+  "command": "/usr/bin/c++  -I\"/Users/rianjeph/Horizon Engine/scripting/src\" -I\"/Users/rianjeph/Horizon Engine/engine/src\" -I\"/Users/rianjeph/Horizon Engine/shared/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Compiler/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Ast/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Common/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Bytecode/include\" -I\"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/VM/include\" -g -std=gnu++20 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/HorizonScripting.dir/src/LuauVM.cpp.o -c \"/Users/rianjeph/Horizon Engine/scripting/src/LuauVM.cpp\"",
   "file": "/Users/rianjeph/Horizon Engine/scripting/src/LuauVM.cpp",
   "output": "scripting/CMakeFiles/HorizonScripting.dir/src/LuauVM.cpp.o"
 },

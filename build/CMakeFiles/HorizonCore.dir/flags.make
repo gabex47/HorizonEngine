@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/Users/rianjeph/Horizon Engine/engine/src" -I"/Users/rianjeph/Horizon Engine/shared/include" -I"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include" -I"/Users/rianjeph/Horizon Engine/build/_deps/glm-src" -I"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src" -I"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
+CXX_INCLUDES = -I"/Users/rianjeph/Horizon Engine/engine/src" -I"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src" -I"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends" -I"/Users/rianjeph/Horizon Engine/shared/include" -I"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include" -I"/Users/rianjeph/Horizon Engine/build/_deps/glm-src" -I"/Users/rianjeph/Horizon Engine/build/_deps/miniaudio-src" -I"/Users/rianjeph/Horizon Engine/build/_deps/nlohmann_json-src/include" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
 
 CXX_FLAGSarm64 = -g -std=gnu++20 -arch arm64
 

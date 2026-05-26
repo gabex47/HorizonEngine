@@ -2,6 +2,7 @@ CMakeFiles/HorizonCore.dir/engine/src/events/HorizonEvent.cpp.o: \
   /Users/rianjeph/Horizon\ Engine/engine/src/events/HorizonEvent.cpp \
   /Users/rianjeph/Horizon\ Engine/engine/src/events/HorizonEvent.h \
   /Users/rianjeph/Horizon\ Engine/engine/src/events/../Instance.h \
+  /Users/rianjeph/Horizon\ Engine/engine/src/events/../object/Instance.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/memory \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config_site \

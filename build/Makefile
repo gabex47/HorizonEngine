@@ -162,6 +162,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named imgui
+
+# Build rule for target.
+imgui: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imgui
+.PHONY : imgui
+
+# fast build rule for target.
+imgui/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/build
+.PHONY : imgui/fast
+
+#=============================================================================
 # Target rules for targets named HorizonCore
 
 # Build rule for target.
@@ -395,53 +408,293 @@ isocline/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/luau-build/CMakeFiles/isocline.dir/build.make _deps/luau-build/CMakeFiles/isocline.dir/build
 .PHONY : isocline/fast
 
-engine/src/Instance.o: engine/src/Instance.cpp.o
-.PHONY : engine/src/Instance.o
+_deps/imgui-src/backends/imgui_impl_glfw.o: _deps/imgui-src/backends/imgui_impl_glfw.cpp.o
+.PHONY : _deps/imgui-src/backends/imgui_impl_glfw.o
 
 # target to build an object file
-engine/src/Instance.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/Instance.cpp.o
-.PHONY : engine/src/Instance.cpp.o
+_deps/imgui-src/backends/imgui_impl_glfw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.o
+.PHONY : _deps/imgui-src/backends/imgui_impl_glfw.cpp.o
 
-engine/src/Instance.i: engine/src/Instance.cpp.i
-.PHONY : engine/src/Instance.i
+_deps/imgui-src/backends/imgui_impl_glfw.i: _deps/imgui-src/backends/imgui_impl_glfw.cpp.i
+.PHONY : _deps/imgui-src/backends/imgui_impl_glfw.i
 
 # target to preprocess a source file
-engine/src/Instance.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/Instance.cpp.i
-.PHONY : engine/src/Instance.cpp.i
+_deps/imgui-src/backends/imgui_impl_glfw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.i
+.PHONY : _deps/imgui-src/backends/imgui_impl_glfw.cpp.i
 
-engine/src/Instance.s: engine/src/Instance.cpp.s
-.PHONY : engine/src/Instance.s
+_deps/imgui-src/backends/imgui_impl_glfw.s: _deps/imgui-src/backends/imgui_impl_glfw.cpp.s
+.PHONY : _deps/imgui-src/backends/imgui_impl_glfw.s
 
 # target to generate assembly for a file
-engine/src/Instance.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/Instance.cpp.s
-.PHONY : engine/src/Instance.cpp.s
+_deps/imgui-src/backends/imgui_impl_glfw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/_deps/imgui-src/backends/imgui_impl_glfw.cpp.s
+.PHONY : _deps/imgui-src/backends/imgui_impl_glfw.cpp.s
 
-engine/src/Part.o: engine/src/Part.cpp.o
-.PHONY : engine/src/Part.o
+_deps/imgui-src/backends/imgui_impl_opengl3.o: _deps/imgui-src/backends/imgui_impl_opengl3.cpp.o
+.PHONY : _deps/imgui-src/backends/imgui_impl_opengl3.o
 
 # target to build an object file
-engine/src/Part.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/Part.cpp.o
-.PHONY : engine/src/Part.cpp.o
+_deps/imgui-src/backends/imgui_impl_opengl3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.o
+.PHONY : _deps/imgui-src/backends/imgui_impl_opengl3.cpp.o
 
-engine/src/Part.i: engine/src/Part.cpp.i
-.PHONY : engine/src/Part.i
+_deps/imgui-src/backends/imgui_impl_opengl3.i: _deps/imgui-src/backends/imgui_impl_opengl3.cpp.i
+.PHONY : _deps/imgui-src/backends/imgui_impl_opengl3.i
 
 # target to preprocess a source file
-engine/src/Part.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/Part.cpp.i
-.PHONY : engine/src/Part.cpp.i
+_deps/imgui-src/backends/imgui_impl_opengl3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.i
+.PHONY : _deps/imgui-src/backends/imgui_impl_opengl3.cpp.i
 
-engine/src/Part.s: engine/src/Part.cpp.s
-.PHONY : engine/src/Part.s
+_deps/imgui-src/backends/imgui_impl_opengl3.s: _deps/imgui-src/backends/imgui_impl_opengl3.cpp.s
+.PHONY : _deps/imgui-src/backends/imgui_impl_opengl3.s
 
 # target to generate assembly for a file
-engine/src/Part.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/Part.cpp.s
-.PHONY : engine/src/Part.cpp.s
+_deps/imgui-src/backends/imgui_impl_opengl3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/_deps/imgui-src/backends/imgui_impl_opengl3.cpp.s
+.PHONY : _deps/imgui-src/backends/imgui_impl_opengl3.cpp.s
+
+_deps/imgui-src/imgui.o: _deps/imgui-src/imgui.cpp.o
+.PHONY : _deps/imgui-src/imgui.o
+
+# target to build an object file
+_deps/imgui-src/imgui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/_deps/imgui-src/imgui.cpp.o
+.PHONY : _deps/imgui-src/imgui.cpp.o
+
+_deps/imgui-src/imgui.i: _deps/imgui-src/imgui.cpp.i
+.PHONY : _deps/imgui-src/imgui.i
+
+# target to preprocess a source file
+_deps/imgui-src/imgui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/_deps/imgui-src/imgui.cpp.i
+.PHONY : _deps/imgui-src/imgui.cpp.i
+
+_deps/imgui-src/imgui.s: _deps/imgui-src/imgui.cpp.s
+.PHONY : _deps/imgui-src/imgui.s
+
+# target to generate assembly for a file
+_deps/imgui-src/imgui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/_deps/imgui-src/imgui.cpp.s
+.PHONY : _deps/imgui-src/imgui.cpp.s
+
+_deps/imgui-src/imgui_demo.o: _deps/imgui-src/imgui_demo.cpp.o
+.PHONY : _deps/imgui-src/imgui_demo.o
+
+# target to build an object file
+_deps/imgui-src/imgui_demo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/_deps/imgui-src/imgui_demo.cpp.o
+.PHONY : _deps/imgui-src/imgui_demo.cpp.o
+
+_deps/imgui-src/imgui_demo.i: _deps/imgui-src/imgui_demo.cpp.i
+.PHONY : _deps/imgui-src/imgui_demo.i
+
+# target to preprocess a source file
+_deps/imgui-src/imgui_demo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/_deps/imgui-src/imgui_demo.cpp.i
+.PHONY : _deps/imgui-src/imgui_demo.cpp.i
+
+_deps/imgui-src/imgui_demo.s: _deps/imgui-src/imgui_demo.cpp.s
+.PHONY : _deps/imgui-src/imgui_demo.s
+
+# target to generate assembly for a file
+_deps/imgui-src/imgui_demo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/_deps/imgui-src/imgui_demo.cpp.s
+.PHONY : _deps/imgui-src/imgui_demo.cpp.s
+
+_deps/imgui-src/imgui_draw.o: _deps/imgui-src/imgui_draw.cpp.o
+.PHONY : _deps/imgui-src/imgui_draw.o
+
+# target to build an object file
+_deps/imgui-src/imgui_draw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/_deps/imgui-src/imgui_draw.cpp.o
+.PHONY : _deps/imgui-src/imgui_draw.cpp.o
+
+_deps/imgui-src/imgui_draw.i: _deps/imgui-src/imgui_draw.cpp.i
+.PHONY : _deps/imgui-src/imgui_draw.i
+
+# target to preprocess a source file
+_deps/imgui-src/imgui_draw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/_deps/imgui-src/imgui_draw.cpp.i
+.PHONY : _deps/imgui-src/imgui_draw.cpp.i
+
+_deps/imgui-src/imgui_draw.s: _deps/imgui-src/imgui_draw.cpp.s
+.PHONY : _deps/imgui-src/imgui_draw.s
+
+# target to generate assembly for a file
+_deps/imgui-src/imgui_draw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/_deps/imgui-src/imgui_draw.cpp.s
+.PHONY : _deps/imgui-src/imgui_draw.cpp.s
+
+_deps/imgui-src/imgui_tables.o: _deps/imgui-src/imgui_tables.cpp.o
+.PHONY : _deps/imgui-src/imgui_tables.o
+
+# target to build an object file
+_deps/imgui-src/imgui_tables.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/_deps/imgui-src/imgui_tables.cpp.o
+.PHONY : _deps/imgui-src/imgui_tables.cpp.o
+
+_deps/imgui-src/imgui_tables.i: _deps/imgui-src/imgui_tables.cpp.i
+.PHONY : _deps/imgui-src/imgui_tables.i
+
+# target to preprocess a source file
+_deps/imgui-src/imgui_tables.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/_deps/imgui-src/imgui_tables.cpp.i
+.PHONY : _deps/imgui-src/imgui_tables.cpp.i
+
+_deps/imgui-src/imgui_tables.s: _deps/imgui-src/imgui_tables.cpp.s
+.PHONY : _deps/imgui-src/imgui_tables.s
+
+# target to generate assembly for a file
+_deps/imgui-src/imgui_tables.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/_deps/imgui-src/imgui_tables.cpp.s
+.PHONY : _deps/imgui-src/imgui_tables.cpp.s
+
+_deps/imgui-src/imgui_widgets.o: _deps/imgui-src/imgui_widgets.cpp.o
+.PHONY : _deps/imgui-src/imgui_widgets.o
+
+# target to build an object file
+_deps/imgui-src/imgui_widgets.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/_deps/imgui-src/imgui_widgets.cpp.o
+.PHONY : _deps/imgui-src/imgui_widgets.cpp.o
+
+_deps/imgui-src/imgui_widgets.i: _deps/imgui-src/imgui_widgets.cpp.i
+.PHONY : _deps/imgui-src/imgui_widgets.i
+
+# target to preprocess a source file
+_deps/imgui-src/imgui_widgets.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/_deps/imgui-src/imgui_widgets.cpp.i
+.PHONY : _deps/imgui-src/imgui_widgets.cpp.i
+
+_deps/imgui-src/imgui_widgets.s: _deps/imgui-src/imgui_widgets.cpp.s
+.PHONY : _deps/imgui-src/imgui_widgets.s
+
+# target to generate assembly for a file
+_deps/imgui-src/imgui_widgets.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui.dir/build.make CMakeFiles/imgui.dir/_deps/imgui-src/imgui_widgets.cpp.s
+.PHONY : _deps/imgui-src/imgui_widgets.cpp.s
+
+engine/src/core/Application.o: engine/src/core/Application.cpp.o
+.PHONY : engine/src/core/Application.o
+
+# target to build an object file
+engine/src/core/Application.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonEngine.dir/build.make CMakeFiles/HorizonEngine.dir/engine/src/core/Application.cpp.o
+.PHONY : engine/src/core/Application.cpp.o
+
+engine/src/core/Application.i: engine/src/core/Application.cpp.i
+.PHONY : engine/src/core/Application.i
+
+# target to preprocess a source file
+engine/src/core/Application.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonEngine.dir/build.make CMakeFiles/HorizonEngine.dir/engine/src/core/Application.cpp.i
+.PHONY : engine/src/core/Application.cpp.i
+
+engine/src/core/Application.s: engine/src/core/Application.cpp.s
+.PHONY : engine/src/core/Application.s
+
+# target to generate assembly for a file
+engine/src/core/Application.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonEngine.dir/build.make CMakeFiles/HorizonEngine.dir/engine/src/core/Application.cpp.s
+.PHONY : engine/src/core/Application.cpp.s
+
+engine/src/core/Engine.o: engine/src/core/Engine.cpp.o
+.PHONY : engine/src/core/Engine.o
+
+# target to build an object file
+engine/src/core/Engine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/core/Engine.cpp.o
+.PHONY : engine/src/core/Engine.cpp.o
+
+engine/src/core/Engine.i: engine/src/core/Engine.cpp.i
+.PHONY : engine/src/core/Engine.i
+
+# target to preprocess a source file
+engine/src/core/Engine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/core/Engine.cpp.i
+.PHONY : engine/src/core/Engine.cpp.i
+
+engine/src/core/Engine.s: engine/src/core/Engine.cpp.s
+.PHONY : engine/src/core/Engine.s
+
+# target to generate assembly for a file
+engine/src/core/Engine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/core/Engine.cpp.s
+.PHONY : engine/src/core/Engine.cpp.s
+
+engine/src/core/Scene.o: engine/src/core/Scene.cpp.o
+.PHONY : engine/src/core/Scene.o
+
+# target to build an object file
+engine/src/core/Scene.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/core/Scene.cpp.o
+.PHONY : engine/src/core/Scene.cpp.o
+
+engine/src/core/Scene.i: engine/src/core/Scene.cpp.i
+.PHONY : engine/src/core/Scene.i
+
+# target to preprocess a source file
+engine/src/core/Scene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/core/Scene.cpp.i
+.PHONY : engine/src/core/Scene.cpp.i
+
+engine/src/core/Scene.s: engine/src/core/Scene.cpp.s
+.PHONY : engine/src/core/Scene.s
+
+# target to generate assembly for a file
+engine/src/core/Scene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/core/Scene.cpp.s
+.PHONY : engine/src/core/Scene.cpp.s
+
+engine/src/editor/EditorUI.o: engine/src/editor/EditorUI.cpp.o
+.PHONY : engine/src/editor/EditorUI.o
+
+# target to build an object file
+engine/src/editor/EditorUI.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUI.cpp.o
+.PHONY : engine/src/editor/EditorUI.cpp.o
+
+engine/src/editor/EditorUI.i: engine/src/editor/EditorUI.cpp.i
+.PHONY : engine/src/editor/EditorUI.i
+
+# target to preprocess a source file
+engine/src/editor/EditorUI.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUI.cpp.i
+.PHONY : engine/src/editor/EditorUI.cpp.i
+
+engine/src/editor/EditorUI.s: engine/src/editor/EditorUI.cpp.s
+.PHONY : engine/src/editor/EditorUI.s
+
+# target to generate assembly for a file
+engine/src/editor/EditorUI.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUI.cpp.s
+.PHONY : engine/src/editor/EditorUI.cpp.s
+
+engine/src/editor/EditorUIPanels.o: engine/src/editor/EditorUIPanels.cpp.o
+.PHONY : engine/src/editor/EditorUIPanels.o
+
+# target to build an object file
+engine/src/editor/EditorUIPanels.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUIPanels.cpp.o
+.PHONY : engine/src/editor/EditorUIPanels.cpp.o
+
+engine/src/editor/EditorUIPanels.i: engine/src/editor/EditorUIPanels.cpp.i
+.PHONY : engine/src/editor/EditorUIPanels.i
+
+# target to preprocess a source file
+engine/src/editor/EditorUIPanels.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUIPanels.cpp.i
+.PHONY : engine/src/editor/EditorUIPanels.cpp.i
+
+engine/src/editor/EditorUIPanels.s: engine/src/editor/EditorUIPanels.cpp.s
+.PHONY : engine/src/editor/EditorUIPanels.s
+
+# target to generate assembly for a file
+engine/src/editor/EditorUIPanels.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUIPanels.cpp.s
+.PHONY : engine/src/editor/EditorUIPanels.cpp.s
 
 engine/src/events/HorizonEvent.o: engine/src/events/HorizonEvent.cpp.o
 .PHONY : engine/src/events/HorizonEvent.o
@@ -515,6 +768,54 @@ engine/src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonEngine.dir/build.make CMakeFiles/HorizonEngine.dir/engine/src/main.cpp.s
 .PHONY : engine/src/main.cpp.s
 
+engine/src/object/Instance.o: engine/src/object/Instance.cpp.o
+.PHONY : engine/src/object/Instance.o
+
+# target to build an object file
+engine/src/object/Instance.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/Instance.cpp.o
+.PHONY : engine/src/object/Instance.cpp.o
+
+engine/src/object/Instance.i: engine/src/object/Instance.cpp.i
+.PHONY : engine/src/object/Instance.i
+
+# target to preprocess a source file
+engine/src/object/Instance.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/Instance.cpp.i
+.PHONY : engine/src/object/Instance.cpp.i
+
+engine/src/object/Instance.s: engine/src/object/Instance.cpp.s
+.PHONY : engine/src/object/Instance.s
+
+# target to generate assembly for a file
+engine/src/object/Instance.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/Instance.cpp.s
+.PHONY : engine/src/object/Instance.cpp.s
+
+engine/src/object/Part.o: engine/src/object/Part.cpp.o
+.PHONY : engine/src/object/Part.o
+
+# target to build an object file
+engine/src/object/Part.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/Part.cpp.o
+.PHONY : engine/src/object/Part.cpp.o
+
+engine/src/object/Part.i: engine/src/object/Part.cpp.i
+.PHONY : engine/src/object/Part.i
+
+# target to preprocess a source file
+engine/src/object/Part.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/Part.cpp.i
+.PHONY : engine/src/object/Part.cpp.i
+
+engine/src/object/Part.s: engine/src/object/Part.cpp.s
+.PHONY : engine/src/object/Part.s
+
+# target to generate assembly for a file
+engine/src/object/Part.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/Part.cpp.s
+.PHONY : engine/src/object/Part.cpp.s
+
 engine/src/renderer/Camera.o: engine/src/renderer/Camera.cpp.o
 .PHONY : engine/src/renderer/Camera.o
 
@@ -538,6 +839,78 @@ engine/src/renderer/Camera.s: engine/src/renderer/Camera.cpp.s
 engine/src/renderer/Camera.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/renderer/Camera.cpp.s
 .PHONY : engine/src/renderer/Camera.cpp.s
+
+engine/src/renderer/EditorCamera.o: engine/src/renderer/EditorCamera.cpp.o
+.PHONY : engine/src/renderer/EditorCamera.o
+
+# target to build an object file
+engine/src/renderer/EditorCamera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/renderer/EditorCamera.cpp.o
+.PHONY : engine/src/renderer/EditorCamera.cpp.o
+
+engine/src/renderer/EditorCamera.i: engine/src/renderer/EditorCamera.cpp.i
+.PHONY : engine/src/renderer/EditorCamera.i
+
+# target to preprocess a source file
+engine/src/renderer/EditorCamera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/renderer/EditorCamera.cpp.i
+.PHONY : engine/src/renderer/EditorCamera.cpp.i
+
+engine/src/renderer/EditorCamera.s: engine/src/renderer/EditorCamera.cpp.s
+.PHONY : engine/src/renderer/EditorCamera.s
+
+# target to generate assembly for a file
+engine/src/renderer/EditorCamera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/renderer/EditorCamera.cpp.s
+.PHONY : engine/src/renderer/EditorCamera.cpp.s
+
+engine/src/renderer/Framebuffer.o: engine/src/renderer/Framebuffer.cpp.o
+.PHONY : engine/src/renderer/Framebuffer.o
+
+# target to build an object file
+engine/src/renderer/Framebuffer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/renderer/Framebuffer.cpp.o
+.PHONY : engine/src/renderer/Framebuffer.cpp.o
+
+engine/src/renderer/Framebuffer.i: engine/src/renderer/Framebuffer.cpp.i
+.PHONY : engine/src/renderer/Framebuffer.i
+
+# target to preprocess a source file
+engine/src/renderer/Framebuffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/renderer/Framebuffer.cpp.i
+.PHONY : engine/src/renderer/Framebuffer.cpp.i
+
+engine/src/renderer/Framebuffer.s: engine/src/renderer/Framebuffer.cpp.s
+.PHONY : engine/src/renderer/Framebuffer.s
+
+# target to generate assembly for a file
+engine/src/renderer/Framebuffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/renderer/Framebuffer.cpp.s
+.PHONY : engine/src/renderer/Framebuffer.cpp.s
+
+engine/src/renderer/Input.o: engine/src/renderer/Input.cpp.o
+.PHONY : engine/src/renderer/Input.o
+
+# target to build an object file
+engine/src/renderer/Input.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/renderer/Input.cpp.o
+.PHONY : engine/src/renderer/Input.cpp.o
+
+engine/src/renderer/Input.i: engine/src/renderer/Input.cpp.i
+.PHONY : engine/src/renderer/Input.i
+
+# target to preprocess a source file
+engine/src/renderer/Input.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/renderer/Input.cpp.i
+.PHONY : engine/src/renderer/Input.cpp.i
+
+engine/src/renderer/Input.s: engine/src/renderer/Input.cpp.s
+.PHONY : engine/src/renderer/Input.s
+
+# target to generate assembly for a file
+engine/src/renderer/Input.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/renderer/Input.cpp.s
+.PHONY : engine/src/renderer/Input.cpp.s
 
 engine/src/renderer/Renderer.o: engine/src/renderer/Renderer.cpp.o
 .PHONY : engine/src/renderer/Renderer.o
@@ -682,30 +1055,6 @@ engine/src/services/MessagingService.s: engine/src/services/MessagingService.cpp
 engine/src/services/MessagingService.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/services/MessagingService.cpp.s
 .PHONY : engine/src/services/MessagingService.cpp.s
-
-engine/src/services/Scene.o: engine/src/services/Scene.cpp.o
-.PHONY : engine/src/services/Scene.o
-
-# target to build an object file
-engine/src/services/Scene.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/services/Scene.cpp.o
-.PHONY : engine/src/services/Scene.cpp.o
-
-engine/src/services/Scene.i: engine/src/services/Scene.cpp.i
-.PHONY : engine/src/services/Scene.i
-
-# target to preprocess a source file
-engine/src/services/Scene.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/services/Scene.cpp.i
-.PHONY : engine/src/services/Scene.cpp.i
-
-engine/src/services/Scene.s: engine/src/services/Scene.cpp.s
-.PHONY : engine/src/services/Scene.s
-
-# target to generate assembly for a file
-engine/src/services/Scene.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/services/Scene.cpp.s
-.PHONY : engine/src/services/Scene.cpp.s
 
 engine/src/services/ServerScripts.o: engine/src/services/ServerScripts.cpp.o
 .PHONY : engine/src/services/ServerScripts.o
@@ -856,13 +1205,44 @@ help:
 	@echo "... Luau.VM"
 	@echo "... glfw"
 	@echo "... glm"
+	@echo "... imgui"
 	@echo "... isocline"
-	@echo "... engine/src/Instance.o"
-	@echo "... engine/src/Instance.i"
-	@echo "... engine/src/Instance.s"
-	@echo "... engine/src/Part.o"
-	@echo "... engine/src/Part.i"
-	@echo "... engine/src/Part.s"
+	@echo "... _deps/imgui-src/backends/imgui_impl_glfw.o"
+	@echo "... _deps/imgui-src/backends/imgui_impl_glfw.i"
+	@echo "... _deps/imgui-src/backends/imgui_impl_glfw.s"
+	@echo "... _deps/imgui-src/backends/imgui_impl_opengl3.o"
+	@echo "... _deps/imgui-src/backends/imgui_impl_opengl3.i"
+	@echo "... _deps/imgui-src/backends/imgui_impl_opengl3.s"
+	@echo "... _deps/imgui-src/imgui.o"
+	@echo "... _deps/imgui-src/imgui.i"
+	@echo "... _deps/imgui-src/imgui.s"
+	@echo "... _deps/imgui-src/imgui_demo.o"
+	@echo "... _deps/imgui-src/imgui_demo.i"
+	@echo "... _deps/imgui-src/imgui_demo.s"
+	@echo "... _deps/imgui-src/imgui_draw.o"
+	@echo "... _deps/imgui-src/imgui_draw.i"
+	@echo "... _deps/imgui-src/imgui_draw.s"
+	@echo "... _deps/imgui-src/imgui_tables.o"
+	@echo "... _deps/imgui-src/imgui_tables.i"
+	@echo "... _deps/imgui-src/imgui_tables.s"
+	@echo "... _deps/imgui-src/imgui_widgets.o"
+	@echo "... _deps/imgui-src/imgui_widgets.i"
+	@echo "... _deps/imgui-src/imgui_widgets.s"
+	@echo "... engine/src/core/Application.o"
+	@echo "... engine/src/core/Application.i"
+	@echo "... engine/src/core/Application.s"
+	@echo "... engine/src/core/Engine.o"
+	@echo "... engine/src/core/Engine.i"
+	@echo "... engine/src/core/Engine.s"
+	@echo "... engine/src/core/Scene.o"
+	@echo "... engine/src/core/Scene.i"
+	@echo "... engine/src/core/Scene.s"
+	@echo "... engine/src/editor/EditorUI.o"
+	@echo "... engine/src/editor/EditorUI.i"
+	@echo "... engine/src/editor/EditorUI.s"
+	@echo "... engine/src/editor/EditorUIPanels.o"
+	@echo "... engine/src/editor/EditorUIPanels.i"
+	@echo "... engine/src/editor/EditorUIPanels.s"
 	@echo "... engine/src/events/HorizonEvent.o"
 	@echo "... engine/src/events/HorizonEvent.i"
 	@echo "... engine/src/events/HorizonEvent.s"
@@ -872,9 +1252,24 @@ help:
 	@echo "... engine/src/main.o"
 	@echo "... engine/src/main.i"
 	@echo "... engine/src/main.s"
+	@echo "... engine/src/object/Instance.o"
+	@echo "... engine/src/object/Instance.i"
+	@echo "... engine/src/object/Instance.s"
+	@echo "... engine/src/object/Part.o"
+	@echo "... engine/src/object/Part.i"
+	@echo "... engine/src/object/Part.s"
 	@echo "... engine/src/renderer/Camera.o"
 	@echo "... engine/src/renderer/Camera.i"
 	@echo "... engine/src/renderer/Camera.s"
+	@echo "... engine/src/renderer/EditorCamera.o"
+	@echo "... engine/src/renderer/EditorCamera.i"
+	@echo "... engine/src/renderer/EditorCamera.s"
+	@echo "... engine/src/renderer/Framebuffer.o"
+	@echo "... engine/src/renderer/Framebuffer.i"
+	@echo "... engine/src/renderer/Framebuffer.s"
+	@echo "... engine/src/renderer/Input.o"
+	@echo "... engine/src/renderer/Input.i"
+	@echo "... engine/src/renderer/Input.s"
 	@echo "... engine/src/renderer/Renderer.o"
 	@echo "... engine/src/renderer/Renderer.i"
 	@echo "... engine/src/renderer/Renderer.s"
@@ -893,9 +1288,6 @@ help:
 	@echo "... engine/src/services/MessagingService.o"
 	@echo "... engine/src/services/MessagingService.i"
 	@echo "... engine/src/services/MessagingService.s"
-	@echo "... engine/src/services/Scene.o"
-	@echo "... engine/src/services/Scene.i"
-	@echo "... engine/src/services/Scene.s"
 	@echo "... engine/src/services/ServerScripts.o"
 	@echo "... engine/src/services/ServerScripts.i"
 	@echo "... engine/src/services/ServerScripts.s"

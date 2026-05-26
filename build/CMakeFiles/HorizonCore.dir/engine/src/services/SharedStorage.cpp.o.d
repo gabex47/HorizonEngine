@@ -2,6 +2,7 @@ CMakeFiles/HorizonCore.dir/engine/src/services/SharedStorage.cpp.o: \
   /Users/rianjeph/Horizon\ Engine/engine/src/services/SharedStorage.cpp \
   /Users/rianjeph/Horizon\ Engine/engine/src/services/SharedStorage.h \
   /Users/rianjeph/Horizon\ Engine/engine/src/services/../Instance.h \
+  /Users/rianjeph/Horizon\ Engine/engine/src/services/../object/Instance.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/memory \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config_site \

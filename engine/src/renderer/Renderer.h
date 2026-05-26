@@ -37,20 +37,33 @@ public:
     bool Init(int width, int height, const char* title);
     bool ShouldClose() const;
     void PollEvents() const;
-    void Update(float deltaTime);
+    void InstallInputCallbacks();
+    void Update(float deltaTime, bool cameraInputEnabled);
     void RenderPart(Part& part);
+    void RenderGround();
     void RenderScene();
+    void ClearDefaultFramebuffer();
+    void SwapBuffers();
+    void SetCursorLocked(bool locked);
+    bool GetKey(Key key) const;
+    GLFWwindow* GetWindow() const;
     void Shutdown();
 
 private:
     void UpdateSceneViewport();
     void RenderPart(Part& part, const glm::mat4& view, const glm::mat4& projection);
+    void RenderGround(const glm::mat4& view, const glm::mat4& projection);
     glm::mat4 GetSceneViewMatrix() const;
     glm::mat4 GetSceneProjectionMatrix() const;
 
     GLFWwindow* window = nullptr;
     unsigned int vao = 0;
     unsigned int vbo = 0;
+    unsigned int groundVao = 0;
+    unsigned int groundVbo = 0;
+    unsigned int gridVao = 0;
+    unsigned int gridVbo = 0;
+    int gridVertexCount = 0;
     Viewport sceneViewport;
     SceneCameraMode sceneCameraMode = SceneCameraMode::Editor;
     EditorCamera editorCamera;

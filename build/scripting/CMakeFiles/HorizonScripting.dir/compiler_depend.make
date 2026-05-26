@@ -995,8 +995,13 @@ scripting/CMakeFiles/HorizonScripting.dir/src/LuauVM.cpp.o: /Users/rianjeph/Hori
   /Users/rianjeph/Horizon\ Engine/engine/src/Instance.h \
   /Users/rianjeph/Horizon\ Engine/engine/src/Part.h \
   /Users/rianjeph/Horizon\ Engine/engine/src/Instance.h \
+  /Users/rianjeph/Horizon\ Engine/engine/src/core/Scene.h \
+  /Users/rianjeph/Horizon\ Engine/engine/src/editor/EditorUI.h \
+  /Users/rianjeph/Horizon\ Engine/engine/src/Instance.h \
   /Users/rianjeph/Horizon\ Engine/engine/src/events/HorizonEvent.h \
   /Users/rianjeph/Horizon\ Engine/engine/src/events/HorizonFunction.h \
+  /Users/rianjeph/Horizon\ Engine/engine/src/object/Instance.h \
+  /Users/rianjeph/Horizon\ Engine/engine/src/object/Part.h \
   /Users/rianjeph/Horizon\ Engine/engine/src/Instance.h \
   /Users/rianjeph/Horizon\ Engine/engine/src/services/BindableEvent.h \
   /Users/rianjeph/Horizon\ Engine/engine/src/services/HorizonStore.h \
@@ -1023,6 +1028,8 @@ scripting/CMakeFiles/HorizonScripting.dir/src/LuauVM.cpp.o: /Users/rianjeph/Hori
 /Users/rianjeph/Horizon\ Engine/engine/src/services/LoopService.h:
 
 /Users/rianjeph/Horizon\ Engine/engine/src/services/BindableEvent.h:
+
+/Users/rianjeph/Horizon\ Engine/engine/src/object/Instance.h:
 
 /Users/rianjeph/Horizon\ Engine/engine/src/events/HorizonFunction.h:
 
@@ -1169,6 +1176,8 @@ _deps/luau-src/Ast/include/Luau/Ast.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_caddr_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_blkcnt_t.h:
+
+/Users/rianjeph/Horizon\ Engine/engine/src/core/Scene.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_rwlockattr_t.h:
 
@@ -1765,6 +1774,8 @@ _deps/luau-src/VM/include/lua.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__locale:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/wrap_iter.h:
+
+/Users/rianjeph/Horizon\ Engine/engine/src/editor/EditorUI.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/prev_permutation.h:
 
@@ -2407,6 +2418,8 @@ _deps/luau-src/VM/include/lua.h:
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/special_functions.h:
+
+/Users/rianjeph/Horizon\ Engine/engine/src/object/Part.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/class_or_enum.h:
 
