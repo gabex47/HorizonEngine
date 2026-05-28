@@ -6,7 +6,5 @@ C_DEFINES = -D_GLFW_COCOA
 
 C_INCLUDES = -I"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include" -I"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/src" -I"/Users/rianjeph/Horizon Engine/build/_deps/glfw-build/src"
 
-C_FLAGSarm64 = -g -std=c99 -arch arm64 -fPIC -Wall
-
-C_FLAGS = -g -std=c99 -arch arm64 -fPIC -Wall
+C_FLAGS = -g -std=c99 -fPIC -Wall
 

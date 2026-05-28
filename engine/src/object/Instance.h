@@ -15,6 +15,7 @@ public:
     virtual ~Instance() = default;
 
     void SetParent(std::shared_ptr<Instance> parent);
+    void RemoveChild(std::shared_ptr<Instance> child);
     std::shared_ptr<Instance> FindFirstChild(const std::string& name);
     std::vector<std::shared_ptr<Instance>> GetChildren();
     virtual std::string GetClass();

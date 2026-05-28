@@ -3,15 +3,51 @@
 #include "Horizon/EngineInfo.h"
 #include "LuauVM.h"
 #include "core/Engine.h"
+#include "core/EngineMode.h"
 #include "editor/EditorUI.h"
+#include "Part.h"
 #include "renderer/Framebuffer.h"
 #include "renderer/Input.h"
 #include "renderer/Renderer.h"
+#include "services/Scene.h"
 
 #include <chrono>
+#include <glm/geometric.hpp>
+#include <glm/vec3.hpp>
 #include <iostream>
+#include <memory>
 
 namespace Horizon {
+
+namespace {
+
+std::shared_ptr<Part> findPlayerPart()
+{
+    return std::dynamic_pointer_cast<Part>(Scene::Get().FindFirstChild("Player"));
+}
+
+void updatePlayerMovement(Renderer& renderer, Part& playerPart, float deltaTime)
+{
+    glm::vec3 forward = renderer.GetPlayCameraForwardDir();
+    glm::vec3 right = glm::normalize(glm::cross(forward, glm::vec3(0.0f, 1.0f, 0.0f)));
+    glm::vec3 moveDir{0.0f, 0.0f, 0.0f};
+
+    if (renderer.GetKey(Key::W)) moveDir += forward;
+    if (renderer.GetKey(Key::S)) moveDir -= forward;
+    if (renderer.GetKey(Key::A)) moveDir -= right;
+    if (renderer.GetKey(Key::D)) moveDir += right;
+
+    if (glm::length(moveDir) > 0.0f)
+        moveDir = glm::normalize(moveDir);
+
+    constexpr float speed = 8.0f;
+    playerPart.Position.X += moveDir.x * speed * deltaTime;
+    playerPart.Position.Z += moveDir.z * speed * deltaTime;
+    playerPart.Transparency = renderer.GetPlayCameraDistance() <= 2.0f ? 1.0f : 0.0f;
+    renderer.SetPlayCameraTarget(glm::vec3(playerPart.Position.X, playerPart.Position.Y, playerPart.Position.Z));
+}
+
+} // namespace
 
 int Application::Run()
 {
@@ -37,6 +73,7 @@ int Application::Run()
     engine.CreateDefaultScene();
 
     bool cursorLocked = true;
+    EngineMode previousMode = gEngineMode;
     renderer.SetCursorLocked(cursorLocked);
     editor.SetMouseInputEnabled(!cursorLocked);
 
@@ -54,13 +91,43 @@ int Application::Run()
         lastFrameTime = now;
         const float deltaTime = delta.count();
 
-        renderer.Update(deltaTime, cursorLocked);
-        if (renderer.GetKey(Key::Tab))
-            cursorLocked = false;
-        if (renderer.GetKey(Key::Escape))
-            cursorLocked = true;
-        renderer.SetCursorLocked(cursorLocked);
-        editor.SetMouseInputEnabled(!cursorLocked);
+        if (previousMode != gEngineMode)
+        {
+            if (gEngineMode == EngineMode::Play)
+            {
+                cursorLocked = false;
+                renderer.ResetPlayCamera();
+                renderer.SetCursorLocked(false);
+                editor.SetMouseInputEnabled(true);
+            }
+            else
+            {
+                cursorLocked = true;
+                renderer.SetCursorLocked(true);
+                editor.SetMouseInputEnabled(false);
+            }
+            previousMode = gEngineMode;
+        }
+
+        if (gEngineMode == EngineMode::Edit)
+        {
+            renderer.Update(deltaTime, cursorLocked);
+            if (renderer.GetKey(Key::Tab))
+                cursorLocked = false;
+            if (renderer.GetKey(Key::Escape))
+                cursorLocked = true;
+            renderer.SetCursorLocked(cursorLocked);
+            editor.SetMouseInputEnabled(!cursorLocked);
+        }
+        else
+        {
+            renderer.Update(deltaTime, false);
+            if (auto playerPart = findPlayerPart())
+                updatePlayerMovement(renderer, *playerPart, deltaTime);
+            else
+                renderer.SetPlayCameraTarget(glm::vec3(0.0f, 1.0f, 0.0f));
+            editor.SetMouseInputEnabled(renderer.GetPlayCameraDistance() > 2.0f);
+        }
 
         fbo.Bind();
         renderer.RenderScene();

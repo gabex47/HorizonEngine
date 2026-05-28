@@ -11,6 +11,8 @@ enum class Key {
     A,
     S,
     D,
+    I,
+    O,
     Q,
     E,
     Tab,
@@ -20,6 +22,7 @@ enum class Key {
 };
 
 enum class MouseButton {
+    Left,
     Right
 };
 

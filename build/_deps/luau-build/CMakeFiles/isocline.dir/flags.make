@@ -6,7 +6,5 @@ C_DEFINES =
 
 C_INCLUDES = -I"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/extern/isocline/include"
 
-C_FLAGSarm64 = -g -arch arm64 -Wall -Wimplicit-fallthrough -Wsign-compare -Wno-unused-function
-
-C_FLAGS = -g -arch arm64 -Wall -Wimplicit-fallthrough -Wsign-compare -Wno-unused-function
+C_FLAGS = -g -Wall -Wimplicit-fallthrough -Wsign-compare -Wno-unused-function
 

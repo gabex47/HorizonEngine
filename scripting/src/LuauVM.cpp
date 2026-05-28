@@ -2,6 +2,11 @@
 
 #include "Instance.h"
 #include "Part.h"
+#include "object/Folder.h"
+#include "object/LocalScript.h"
+#include "object/ModuleScript.h"
+#include "object/ServerScript.h"
+#include "object/SpotLight.h"
 #include "events/HorizonEvent.h"
 #include "events/HorizonFunction.h"
 #include "editor/EditorUI.h"
@@ -650,6 +655,16 @@ int instanceNew(lua_State* L)
     std::shared_ptr<Horizon::Instance> instance;
     if (std::strcmp(className, "Part") == 0)
         instance = std::make_shared<Horizon::Part>();
+    else if (std::strcmp(className, "ServerScript") == 0)
+        instance = std::make_shared<Horizon::ServerScript>();
+    else if (std::strcmp(className, "LocalScript") == 0)
+        instance = std::make_shared<Horizon::LocalScript>();
+    else if (std::strcmp(className, "ModuleScript") == 0)
+        instance = std::make_shared<Horizon::ModuleScript>();
+    else if (std::strcmp(className, "Folder") == 0)
+        instance = std::make_shared<Horizon::Folder>();
+    else if (std::strcmp(className, "SpotLight") == 0)
+        instance = std::make_shared<Horizon::SpotLight>();
     else if (std::strcmp(className, "HorizonEvent") == 0)
         instance = std::make_shared<Horizon::HorizonEvent>();
     else if (std::strcmp(className, "HorizonFunction") == 0)

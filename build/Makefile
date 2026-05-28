@@ -624,6 +624,30 @@ engine/src/core/Engine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/core/Engine.cpp.s
 .PHONY : engine/src/core/Engine.cpp.s
 
+engine/src/core/EngineMode.o: engine/src/core/EngineMode.cpp.o
+.PHONY : engine/src/core/EngineMode.o
+
+# target to build an object file
+engine/src/core/EngineMode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/core/EngineMode.cpp.o
+.PHONY : engine/src/core/EngineMode.cpp.o
+
+engine/src/core/EngineMode.i: engine/src/core/EngineMode.cpp.i
+.PHONY : engine/src/core/EngineMode.i
+
+# target to preprocess a source file
+engine/src/core/EngineMode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/core/EngineMode.cpp.i
+.PHONY : engine/src/core/EngineMode.cpp.i
+
+engine/src/core/EngineMode.s: engine/src/core/EngineMode.cpp.s
+.PHONY : engine/src/core/EngineMode.s
+
+# target to generate assembly for a file
+engine/src/core/EngineMode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/core/EngineMode.cpp.s
+.PHONY : engine/src/core/EngineMode.cpp.s
+
 engine/src/core/Scene.o: engine/src/core/Scene.cpp.o
 .PHONY : engine/src/core/Scene.o
 
@@ -647,6 +671,30 @@ engine/src/core/Scene.s: engine/src/core/Scene.cpp.s
 engine/src/core/Scene.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/core/Scene.cpp.s
 .PHONY : engine/src/core/Scene.cpp.s
+
+engine/src/editor/EditorActions.o: engine/src/editor/EditorActions.cpp.o
+.PHONY : engine/src/editor/EditorActions.o
+
+# target to build an object file
+engine/src/editor/EditorActions.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/editor/EditorActions.cpp.o
+.PHONY : engine/src/editor/EditorActions.cpp.o
+
+engine/src/editor/EditorActions.i: engine/src/editor/EditorActions.cpp.i
+.PHONY : engine/src/editor/EditorActions.i
+
+# target to preprocess a source file
+engine/src/editor/EditorActions.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/editor/EditorActions.cpp.i
+.PHONY : engine/src/editor/EditorActions.cpp.i
+
+engine/src/editor/EditorActions.s: engine/src/editor/EditorActions.cpp.s
+.PHONY : engine/src/editor/EditorActions.s
+
+# target to generate assembly for a file
+engine/src/editor/EditorActions.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/editor/EditorActions.cpp.s
+.PHONY : engine/src/editor/EditorActions.cpp.s
 
 engine/src/editor/EditorUI.o: engine/src/editor/EditorUI.cpp.o
 .PHONY : engine/src/editor/EditorUI.o
@@ -768,6 +816,30 @@ engine/src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonEngine.dir/build.make CMakeFiles/HorizonEngine.dir/engine/src/main.cpp.s
 .PHONY : engine/src/main.cpp.s
 
+engine/src/object/Folder.o: engine/src/object/Folder.cpp.o
+.PHONY : engine/src/object/Folder.o
+
+# target to build an object file
+engine/src/object/Folder.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/Folder.cpp.o
+.PHONY : engine/src/object/Folder.cpp.o
+
+engine/src/object/Folder.i: engine/src/object/Folder.cpp.i
+.PHONY : engine/src/object/Folder.i
+
+# target to preprocess a source file
+engine/src/object/Folder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/Folder.cpp.i
+.PHONY : engine/src/object/Folder.cpp.i
+
+engine/src/object/Folder.s: engine/src/object/Folder.cpp.s
+.PHONY : engine/src/object/Folder.s
+
+# target to generate assembly for a file
+engine/src/object/Folder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/Folder.cpp.s
+.PHONY : engine/src/object/Folder.cpp.s
+
 engine/src/object/Instance.o: engine/src/object/Instance.cpp.o
 .PHONY : engine/src/object/Instance.o
 
@@ -792,6 +864,54 @@ engine/src/object/Instance.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/Instance.cpp.s
 .PHONY : engine/src/object/Instance.cpp.s
 
+engine/src/object/LocalScript.o: engine/src/object/LocalScript.cpp.o
+.PHONY : engine/src/object/LocalScript.o
+
+# target to build an object file
+engine/src/object/LocalScript.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/LocalScript.cpp.o
+.PHONY : engine/src/object/LocalScript.cpp.o
+
+engine/src/object/LocalScript.i: engine/src/object/LocalScript.cpp.i
+.PHONY : engine/src/object/LocalScript.i
+
+# target to preprocess a source file
+engine/src/object/LocalScript.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/LocalScript.cpp.i
+.PHONY : engine/src/object/LocalScript.cpp.i
+
+engine/src/object/LocalScript.s: engine/src/object/LocalScript.cpp.s
+.PHONY : engine/src/object/LocalScript.s
+
+# target to generate assembly for a file
+engine/src/object/LocalScript.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/LocalScript.cpp.s
+.PHONY : engine/src/object/LocalScript.cpp.s
+
+engine/src/object/ModuleScript.o: engine/src/object/ModuleScript.cpp.o
+.PHONY : engine/src/object/ModuleScript.o
+
+# target to build an object file
+engine/src/object/ModuleScript.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/ModuleScript.cpp.o
+.PHONY : engine/src/object/ModuleScript.cpp.o
+
+engine/src/object/ModuleScript.i: engine/src/object/ModuleScript.cpp.i
+.PHONY : engine/src/object/ModuleScript.i
+
+# target to preprocess a source file
+engine/src/object/ModuleScript.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/ModuleScript.cpp.i
+.PHONY : engine/src/object/ModuleScript.cpp.i
+
+engine/src/object/ModuleScript.s: engine/src/object/ModuleScript.cpp.s
+.PHONY : engine/src/object/ModuleScript.s
+
+# target to generate assembly for a file
+engine/src/object/ModuleScript.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/ModuleScript.cpp.s
+.PHONY : engine/src/object/ModuleScript.cpp.s
+
 engine/src/object/Part.o: engine/src/object/Part.cpp.o
 .PHONY : engine/src/object/Part.o
 
@@ -815,6 +935,78 @@ engine/src/object/Part.s: engine/src/object/Part.cpp.s
 engine/src/object/Part.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/Part.cpp.s
 .PHONY : engine/src/object/Part.cpp.s
+
+engine/src/object/Script.o: engine/src/object/Script.cpp.o
+.PHONY : engine/src/object/Script.o
+
+# target to build an object file
+engine/src/object/Script.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/Script.cpp.o
+.PHONY : engine/src/object/Script.cpp.o
+
+engine/src/object/Script.i: engine/src/object/Script.cpp.i
+.PHONY : engine/src/object/Script.i
+
+# target to preprocess a source file
+engine/src/object/Script.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/Script.cpp.i
+.PHONY : engine/src/object/Script.cpp.i
+
+engine/src/object/Script.s: engine/src/object/Script.cpp.s
+.PHONY : engine/src/object/Script.s
+
+# target to generate assembly for a file
+engine/src/object/Script.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/Script.cpp.s
+.PHONY : engine/src/object/Script.cpp.s
+
+engine/src/object/ServerScript.o: engine/src/object/ServerScript.cpp.o
+.PHONY : engine/src/object/ServerScript.o
+
+# target to build an object file
+engine/src/object/ServerScript.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/ServerScript.cpp.o
+.PHONY : engine/src/object/ServerScript.cpp.o
+
+engine/src/object/ServerScript.i: engine/src/object/ServerScript.cpp.i
+.PHONY : engine/src/object/ServerScript.i
+
+# target to preprocess a source file
+engine/src/object/ServerScript.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/ServerScript.cpp.i
+.PHONY : engine/src/object/ServerScript.cpp.i
+
+engine/src/object/ServerScript.s: engine/src/object/ServerScript.cpp.s
+.PHONY : engine/src/object/ServerScript.s
+
+# target to generate assembly for a file
+engine/src/object/ServerScript.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/ServerScript.cpp.s
+.PHONY : engine/src/object/ServerScript.cpp.s
+
+engine/src/object/SpotLight.o: engine/src/object/SpotLight.cpp.o
+.PHONY : engine/src/object/SpotLight.o
+
+# target to build an object file
+engine/src/object/SpotLight.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/SpotLight.cpp.o
+.PHONY : engine/src/object/SpotLight.cpp.o
+
+engine/src/object/SpotLight.i: engine/src/object/SpotLight.cpp.i
+.PHONY : engine/src/object/SpotLight.i
+
+# target to preprocess a source file
+engine/src/object/SpotLight.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/SpotLight.cpp.i
+.PHONY : engine/src/object/SpotLight.cpp.i
+
+engine/src/object/SpotLight.s: engine/src/object/SpotLight.cpp.s
+.PHONY : engine/src/object/SpotLight.s
+
+# target to generate assembly for a file
+engine/src/object/SpotLight.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/object/SpotLight.cpp.s
+.PHONY : engine/src/object/SpotLight.cpp.s
 
 engine/src/renderer/Camera.o: engine/src/renderer/Camera.cpp.o
 .PHONY : engine/src/renderer/Camera.o
@@ -911,6 +1103,30 @@ engine/src/renderer/Input.s: engine/src/renderer/Input.cpp.s
 engine/src/renderer/Input.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/renderer/Input.cpp.s
 .PHONY : engine/src/renderer/Input.cpp.s
+
+engine/src/renderer/PlayCamera.o: engine/src/renderer/PlayCamera.cpp.o
+.PHONY : engine/src/renderer/PlayCamera.o
+
+# target to build an object file
+engine/src/renderer/PlayCamera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/renderer/PlayCamera.cpp.o
+.PHONY : engine/src/renderer/PlayCamera.cpp.o
+
+engine/src/renderer/PlayCamera.i: engine/src/renderer/PlayCamera.cpp.i
+.PHONY : engine/src/renderer/PlayCamera.i
+
+# target to preprocess a source file
+engine/src/renderer/PlayCamera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/renderer/PlayCamera.cpp.i
+.PHONY : engine/src/renderer/PlayCamera.cpp.i
+
+engine/src/renderer/PlayCamera.s: engine/src/renderer/PlayCamera.cpp.s
+.PHONY : engine/src/renderer/PlayCamera.s
+
+# target to generate assembly for a file
+engine/src/renderer/PlayCamera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HorizonCore.dir/build.make CMakeFiles/HorizonCore.dir/engine/src/renderer/PlayCamera.cpp.s
+.PHONY : engine/src/renderer/PlayCamera.cpp.s
 
 engine/src/renderer/Renderer.o: engine/src/renderer/Renderer.cpp.o
 .PHONY : engine/src/renderer/Renderer.o
@@ -1234,9 +1450,15 @@ help:
 	@echo "... engine/src/core/Engine.o"
 	@echo "... engine/src/core/Engine.i"
 	@echo "... engine/src/core/Engine.s"
+	@echo "... engine/src/core/EngineMode.o"
+	@echo "... engine/src/core/EngineMode.i"
+	@echo "... engine/src/core/EngineMode.s"
 	@echo "... engine/src/core/Scene.o"
 	@echo "... engine/src/core/Scene.i"
 	@echo "... engine/src/core/Scene.s"
+	@echo "... engine/src/editor/EditorActions.o"
+	@echo "... engine/src/editor/EditorActions.i"
+	@echo "... engine/src/editor/EditorActions.s"
 	@echo "... engine/src/editor/EditorUI.o"
 	@echo "... engine/src/editor/EditorUI.i"
 	@echo "... engine/src/editor/EditorUI.s"
@@ -1252,12 +1474,30 @@ help:
 	@echo "... engine/src/main.o"
 	@echo "... engine/src/main.i"
 	@echo "... engine/src/main.s"
+	@echo "... engine/src/object/Folder.o"
+	@echo "... engine/src/object/Folder.i"
+	@echo "... engine/src/object/Folder.s"
 	@echo "... engine/src/object/Instance.o"
 	@echo "... engine/src/object/Instance.i"
 	@echo "... engine/src/object/Instance.s"
+	@echo "... engine/src/object/LocalScript.o"
+	@echo "... engine/src/object/LocalScript.i"
+	@echo "... engine/src/object/LocalScript.s"
+	@echo "... engine/src/object/ModuleScript.o"
+	@echo "... engine/src/object/ModuleScript.i"
+	@echo "... engine/src/object/ModuleScript.s"
 	@echo "... engine/src/object/Part.o"
 	@echo "... engine/src/object/Part.i"
 	@echo "... engine/src/object/Part.s"
+	@echo "... engine/src/object/Script.o"
+	@echo "... engine/src/object/Script.i"
+	@echo "... engine/src/object/Script.s"
+	@echo "... engine/src/object/ServerScript.o"
+	@echo "... engine/src/object/ServerScript.i"
+	@echo "... engine/src/object/ServerScript.s"
+	@echo "... engine/src/object/SpotLight.o"
+	@echo "... engine/src/object/SpotLight.i"
+	@echo "... engine/src/object/SpotLight.s"
 	@echo "... engine/src/renderer/Camera.o"
 	@echo "... engine/src/renderer/Camera.i"
 	@echo "... engine/src/renderer/Camera.s"
@@ -1270,6 +1510,9 @@ help:
 	@echo "... engine/src/renderer/Input.o"
 	@echo "... engine/src/renderer/Input.i"
 	@echo "... engine/src/renderer/Input.s"
+	@echo "... engine/src/renderer/PlayCamera.o"
+	@echo "... engine/src/renderer/PlayCamera.i"
+	@echo "... engine/src/renderer/PlayCamera.s"
 	@echo "... engine/src/renderer/Renderer.o"
 	@echo "... engine/src/renderer/Renderer.i"
 	@echo "... engine/src/renderer/Renderer.s"

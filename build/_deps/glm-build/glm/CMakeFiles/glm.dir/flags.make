@@ -6,7 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I"/Users/rianjeph/Horizon Engine/build/_deps/glm-src"
 
-CXX_FLAGSarm64 = -g -arch arm64 -Wno-c++98-compat -Wno-c++98-compat-pedantic
-
-CXX_FLAGS = -g -arch arm64 -Wno-c++98-compat -Wno-c++98-compat-pedantic
+CXX_FLAGS = -g -Wno-c++98-compat -Wno-c++98-compat-pedantic
 

@@ -6,7 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Ast/include" -I"/Users/rianjeph/Horizon Engine/build/_deps/luau-src/Common/include"
 
-CXX_FLAGSarm64 = -g -std=gnu++17 -arch arm64 -Wall -Wimplicit-fallthrough -Wsign-compare
-
-CXX_FLAGS = -g -std=gnu++17 -arch arm64 -Wall -Wimplicit-fallthrough -Wsign-compare
+CXX_FLAGS = -g -std=gnu++17 -Wall -Wimplicit-fallthrough -Wsign-compare
 

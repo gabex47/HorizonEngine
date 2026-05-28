@@ -86,10 +86,24 @@ CMakeFiles/HorizonCore.dir/engine/src/core/Engine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HorizonCore.dir/engine/src/core/Engine.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/rianjeph/Horizon Engine/engine/src/core/Engine.cpp" -o CMakeFiles/HorizonCore.dir/engine/src/core/Engine.cpp.s
 
+CMakeFiles/HorizonCore.dir/engine/src/core/EngineMode.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
+CMakeFiles/HorizonCore.dir/engine/src/core/EngineMode.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/core/EngineMode.cpp
+CMakeFiles/HorizonCore.dir/engine/src/core/EngineMode.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/core/EngineMode.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/core/EngineMode.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/core/EngineMode.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/core/EngineMode.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/core/EngineMode.cpp"
+
+CMakeFiles/HorizonCore.dir/engine/src/core/EngineMode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/HorizonCore.dir/engine/src/core/EngineMode.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/rianjeph/Horizon Engine/engine/src/core/EngineMode.cpp" > CMakeFiles/HorizonCore.dir/engine/src/core/EngineMode.cpp.i
+
+CMakeFiles/HorizonCore.dir/engine/src/core/EngineMode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HorizonCore.dir/engine/src/core/EngineMode.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/rianjeph/Horizon Engine/engine/src/core/EngineMode.cpp" -o CMakeFiles/HorizonCore.dir/engine/src/core/EngineMode.cpp.s
+
 CMakeFiles/HorizonCore.dir/engine/src/core/Scene.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
 CMakeFiles/HorizonCore.dir/engine/src/core/Scene.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/core/Scene.cpp
 CMakeFiles/HorizonCore.dir/engine/src/core/Scene.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/core/Scene.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/core/Scene.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/core/Scene.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/core/Scene.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/core/Scene.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/core/Scene.cpp"
 
 CMakeFiles/HorizonCore.dir/engine/src/core/Scene.cpp.i: cmake_force
@@ -103,7 +117,7 @@ CMakeFiles/HorizonCore.dir/engine/src/core/Scene.cpp.s: cmake_force
 CMakeFiles/HorizonCore.dir/engine/src/object/Instance.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
 CMakeFiles/HorizonCore.dir/engine/src/object/Instance.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/object/Instance.cpp
 CMakeFiles/HorizonCore.dir/engine/src/object/Instance.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/object/Instance.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/object/Instance.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/object/Instance.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/object/Instance.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/object/Instance.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/object/Instance.cpp"
 
 CMakeFiles/HorizonCore.dir/engine/src/object/Instance.cpp.i: cmake_force
@@ -117,7 +131,7 @@ CMakeFiles/HorizonCore.dir/engine/src/object/Instance.cpp.s: cmake_force
 CMakeFiles/HorizonCore.dir/engine/src/object/Part.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
 CMakeFiles/HorizonCore.dir/engine/src/object/Part.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/object/Part.cpp
 CMakeFiles/HorizonCore.dir/engine/src/object/Part.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/object/Part.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/object/Part.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/object/Part.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/object/Part.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/object/Part.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/object/Part.cpp"
 
 CMakeFiles/HorizonCore.dir/engine/src/object/Part.cpp.i: cmake_force
@@ -128,10 +142,94 @@ CMakeFiles/HorizonCore.dir/engine/src/object/Part.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HorizonCore.dir/engine/src/object/Part.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/rianjeph/Horizon Engine/engine/src/object/Part.cpp" -o CMakeFiles/HorizonCore.dir/engine/src/object/Part.cpp.s
 
+CMakeFiles/HorizonCore.dir/engine/src/object/Script.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
+CMakeFiles/HorizonCore.dir/engine/src/object/Script.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/object/Script.cpp
+CMakeFiles/HorizonCore.dir/engine/src/object/Script.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/object/Script.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/object/Script.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/object/Script.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/object/Script.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/object/Script.cpp"
+
+CMakeFiles/HorizonCore.dir/engine/src/object/Script.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/HorizonCore.dir/engine/src/object/Script.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/rianjeph/Horizon Engine/engine/src/object/Script.cpp" > CMakeFiles/HorizonCore.dir/engine/src/object/Script.cpp.i
+
+CMakeFiles/HorizonCore.dir/engine/src/object/Script.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HorizonCore.dir/engine/src/object/Script.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/rianjeph/Horizon Engine/engine/src/object/Script.cpp" -o CMakeFiles/HorizonCore.dir/engine/src/object/Script.cpp.s
+
+CMakeFiles/HorizonCore.dir/engine/src/object/ServerScript.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
+CMakeFiles/HorizonCore.dir/engine/src/object/ServerScript.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/object/ServerScript.cpp
+CMakeFiles/HorizonCore.dir/engine/src/object/ServerScript.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/object/ServerScript.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/object/ServerScript.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/object/ServerScript.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/object/ServerScript.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/object/ServerScript.cpp"
+
+CMakeFiles/HorizonCore.dir/engine/src/object/ServerScript.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/HorizonCore.dir/engine/src/object/ServerScript.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/rianjeph/Horizon Engine/engine/src/object/ServerScript.cpp" > CMakeFiles/HorizonCore.dir/engine/src/object/ServerScript.cpp.i
+
+CMakeFiles/HorizonCore.dir/engine/src/object/ServerScript.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HorizonCore.dir/engine/src/object/ServerScript.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/rianjeph/Horizon Engine/engine/src/object/ServerScript.cpp" -o CMakeFiles/HorizonCore.dir/engine/src/object/ServerScript.cpp.s
+
+CMakeFiles/HorizonCore.dir/engine/src/object/LocalScript.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
+CMakeFiles/HorizonCore.dir/engine/src/object/LocalScript.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/object/LocalScript.cpp
+CMakeFiles/HorizonCore.dir/engine/src/object/LocalScript.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/object/LocalScript.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/object/LocalScript.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/object/LocalScript.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/object/LocalScript.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/object/LocalScript.cpp"
+
+CMakeFiles/HorizonCore.dir/engine/src/object/LocalScript.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/HorizonCore.dir/engine/src/object/LocalScript.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/rianjeph/Horizon Engine/engine/src/object/LocalScript.cpp" > CMakeFiles/HorizonCore.dir/engine/src/object/LocalScript.cpp.i
+
+CMakeFiles/HorizonCore.dir/engine/src/object/LocalScript.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HorizonCore.dir/engine/src/object/LocalScript.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/rianjeph/Horizon Engine/engine/src/object/LocalScript.cpp" -o CMakeFiles/HorizonCore.dir/engine/src/object/LocalScript.cpp.s
+
+CMakeFiles/HorizonCore.dir/engine/src/object/ModuleScript.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
+CMakeFiles/HorizonCore.dir/engine/src/object/ModuleScript.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/object/ModuleScript.cpp
+CMakeFiles/HorizonCore.dir/engine/src/object/ModuleScript.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/object/ModuleScript.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/object/ModuleScript.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/object/ModuleScript.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/object/ModuleScript.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/object/ModuleScript.cpp"
+
+CMakeFiles/HorizonCore.dir/engine/src/object/ModuleScript.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/HorizonCore.dir/engine/src/object/ModuleScript.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/rianjeph/Horizon Engine/engine/src/object/ModuleScript.cpp" > CMakeFiles/HorizonCore.dir/engine/src/object/ModuleScript.cpp.i
+
+CMakeFiles/HorizonCore.dir/engine/src/object/ModuleScript.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HorizonCore.dir/engine/src/object/ModuleScript.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/rianjeph/Horizon Engine/engine/src/object/ModuleScript.cpp" -o CMakeFiles/HorizonCore.dir/engine/src/object/ModuleScript.cpp.s
+
+CMakeFiles/HorizonCore.dir/engine/src/object/Folder.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
+CMakeFiles/HorizonCore.dir/engine/src/object/Folder.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/object/Folder.cpp
+CMakeFiles/HorizonCore.dir/engine/src/object/Folder.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/object/Folder.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/object/Folder.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/object/Folder.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/object/Folder.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/object/Folder.cpp"
+
+CMakeFiles/HorizonCore.dir/engine/src/object/Folder.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/HorizonCore.dir/engine/src/object/Folder.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/rianjeph/Horizon Engine/engine/src/object/Folder.cpp" > CMakeFiles/HorizonCore.dir/engine/src/object/Folder.cpp.i
+
+CMakeFiles/HorizonCore.dir/engine/src/object/Folder.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HorizonCore.dir/engine/src/object/Folder.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/rianjeph/Horizon Engine/engine/src/object/Folder.cpp" -o CMakeFiles/HorizonCore.dir/engine/src/object/Folder.cpp.s
+
+CMakeFiles/HorizonCore.dir/engine/src/object/SpotLight.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
+CMakeFiles/HorizonCore.dir/engine/src/object/SpotLight.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/object/SpotLight.cpp
+CMakeFiles/HorizonCore.dir/engine/src/object/SpotLight.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/object/SpotLight.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/object/SpotLight.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/object/SpotLight.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/object/SpotLight.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/object/SpotLight.cpp"
+
+CMakeFiles/HorizonCore.dir/engine/src/object/SpotLight.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/HorizonCore.dir/engine/src/object/SpotLight.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/rianjeph/Horizon Engine/engine/src/object/SpotLight.cpp" > CMakeFiles/HorizonCore.dir/engine/src/object/SpotLight.cpp.i
+
+CMakeFiles/HorizonCore.dir/engine/src/object/SpotLight.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HorizonCore.dir/engine/src/object/SpotLight.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/rianjeph/Horizon Engine/engine/src/object/SpotLight.cpp" -o CMakeFiles/HorizonCore.dir/engine/src/object/SpotLight.cpp.s
+
 CMakeFiles/HorizonCore.dir/engine/src/events/HorizonEvent.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
 CMakeFiles/HorizonCore.dir/engine/src/events/HorizonEvent.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/events/HorizonEvent.cpp
 CMakeFiles/HorizonCore.dir/engine/src/events/HorizonEvent.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/events/HorizonEvent.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/events/HorizonEvent.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/events/HorizonEvent.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/events/HorizonEvent.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/events/HorizonEvent.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/events/HorizonEvent.cpp"
 
 CMakeFiles/HorizonCore.dir/engine/src/events/HorizonEvent.cpp.i: cmake_force
@@ -145,7 +243,7 @@ CMakeFiles/HorizonCore.dir/engine/src/events/HorizonEvent.cpp.s: cmake_force
 CMakeFiles/HorizonCore.dir/engine/src/events/HorizonFunction.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
 CMakeFiles/HorizonCore.dir/engine/src/events/HorizonFunction.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/events/HorizonFunction.cpp
 CMakeFiles/HorizonCore.dir/engine/src/events/HorizonFunction.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/events/HorizonFunction.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/events/HorizonFunction.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/events/HorizonFunction.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/events/HorizonFunction.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/events/HorizonFunction.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/events/HorizonFunction.cpp"
 
 CMakeFiles/HorizonCore.dir/engine/src/events/HorizonFunction.cpp.i: cmake_force
@@ -159,7 +257,7 @@ CMakeFiles/HorizonCore.dir/engine/src/events/HorizonFunction.cpp.s: cmake_force
 CMakeFiles/HorizonCore.dir/engine/src/renderer/Camera.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
 CMakeFiles/HorizonCore.dir/engine/src/renderer/Camera.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/renderer/Camera.cpp
 CMakeFiles/HorizonCore.dir/engine/src/renderer/Camera.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/renderer/Camera.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/renderer/Camera.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/renderer/Camera.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/renderer/Camera.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/renderer/Camera.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/renderer/Camera.cpp"
 
 CMakeFiles/HorizonCore.dir/engine/src/renderer/Camera.cpp.i: cmake_force
@@ -173,7 +271,7 @@ CMakeFiles/HorizonCore.dir/engine/src/renderer/Camera.cpp.s: cmake_force
 CMakeFiles/HorizonCore.dir/engine/src/renderer/EditorCamera.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
 CMakeFiles/HorizonCore.dir/engine/src/renderer/EditorCamera.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/renderer/EditorCamera.cpp
 CMakeFiles/HorizonCore.dir/engine/src/renderer/EditorCamera.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/renderer/EditorCamera.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/renderer/EditorCamera.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/renderer/EditorCamera.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/renderer/EditorCamera.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/renderer/EditorCamera.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/renderer/EditorCamera.cpp"
 
 CMakeFiles/HorizonCore.dir/engine/src/renderer/EditorCamera.cpp.i: cmake_force
@@ -187,7 +285,7 @@ CMakeFiles/HorizonCore.dir/engine/src/renderer/EditorCamera.cpp.s: cmake_force
 CMakeFiles/HorizonCore.dir/engine/src/renderer/Framebuffer.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
 CMakeFiles/HorizonCore.dir/engine/src/renderer/Framebuffer.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/renderer/Framebuffer.cpp
 CMakeFiles/HorizonCore.dir/engine/src/renderer/Framebuffer.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/renderer/Framebuffer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/renderer/Framebuffer.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/renderer/Framebuffer.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/renderer/Framebuffer.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/renderer/Framebuffer.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/renderer/Framebuffer.cpp"
 
 CMakeFiles/HorizonCore.dir/engine/src/renderer/Framebuffer.cpp.i: cmake_force
@@ -201,7 +299,7 @@ CMakeFiles/HorizonCore.dir/engine/src/renderer/Framebuffer.cpp.s: cmake_force
 CMakeFiles/HorizonCore.dir/engine/src/renderer/Input.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
 CMakeFiles/HorizonCore.dir/engine/src/renderer/Input.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/renderer/Input.cpp
 CMakeFiles/HorizonCore.dir/engine/src/renderer/Input.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/renderer/Input.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/renderer/Input.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/renderer/Input.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/renderer/Input.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/renderer/Input.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/renderer/Input.cpp"
 
 CMakeFiles/HorizonCore.dir/engine/src/renderer/Input.cpp.i: cmake_force
@@ -212,10 +310,24 @@ CMakeFiles/HorizonCore.dir/engine/src/renderer/Input.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HorizonCore.dir/engine/src/renderer/Input.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/rianjeph/Horizon Engine/engine/src/renderer/Input.cpp" -o CMakeFiles/HorizonCore.dir/engine/src/renderer/Input.cpp.s
 
+CMakeFiles/HorizonCore.dir/engine/src/renderer/PlayCamera.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
+CMakeFiles/HorizonCore.dir/engine/src/renderer/PlayCamera.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/renderer/PlayCamera.cpp
+CMakeFiles/HorizonCore.dir/engine/src/renderer/PlayCamera.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/renderer/PlayCamera.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/renderer/PlayCamera.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/renderer/PlayCamera.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/renderer/PlayCamera.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/renderer/PlayCamera.cpp"
+
+CMakeFiles/HorizonCore.dir/engine/src/renderer/PlayCamera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/HorizonCore.dir/engine/src/renderer/PlayCamera.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/rianjeph/Horizon Engine/engine/src/renderer/PlayCamera.cpp" > CMakeFiles/HorizonCore.dir/engine/src/renderer/PlayCamera.cpp.i
+
+CMakeFiles/HorizonCore.dir/engine/src/renderer/PlayCamera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HorizonCore.dir/engine/src/renderer/PlayCamera.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/rianjeph/Horizon Engine/engine/src/renderer/PlayCamera.cpp" -o CMakeFiles/HorizonCore.dir/engine/src/renderer/PlayCamera.cpp.s
+
 CMakeFiles/HorizonCore.dir/engine/src/renderer/Renderer.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
 CMakeFiles/HorizonCore.dir/engine/src/renderer/Renderer.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/renderer/Renderer.cpp
 CMakeFiles/HorizonCore.dir/engine/src/renderer/Renderer.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/renderer/Renderer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/renderer/Renderer.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/renderer/Renderer.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/renderer/Renderer.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/renderer/Renderer.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/renderer/Renderer.cpp"
 
 CMakeFiles/HorizonCore.dir/engine/src/renderer/Renderer.cpp.i: cmake_force
@@ -229,7 +341,7 @@ CMakeFiles/HorizonCore.dir/engine/src/renderer/Renderer.cpp.s: cmake_force
 CMakeFiles/HorizonCore.dir/engine/src/renderer/Shader.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
 CMakeFiles/HorizonCore.dir/engine/src/renderer/Shader.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/renderer/Shader.cpp
 CMakeFiles/HorizonCore.dir/engine/src/renderer/Shader.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/renderer/Shader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/renderer/Shader.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/renderer/Shader.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/renderer/Shader.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/renderer/Shader.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/renderer/Shader.cpp"
 
 CMakeFiles/HorizonCore.dir/engine/src/renderer/Shader.cpp.i: cmake_force
@@ -240,10 +352,24 @@ CMakeFiles/HorizonCore.dir/engine/src/renderer/Shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HorizonCore.dir/engine/src/renderer/Shader.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/rianjeph/Horizon Engine/engine/src/renderer/Shader.cpp" -o CMakeFiles/HorizonCore.dir/engine/src/renderer/Shader.cpp.s
 
+CMakeFiles/HorizonCore.dir/engine/src/editor/EditorActions.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
+CMakeFiles/HorizonCore.dir/engine/src/editor/EditorActions.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/editor/EditorActions.cpp
+CMakeFiles/HorizonCore.dir/engine/src/editor/EditorActions.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/editor/EditorActions.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/editor/EditorActions.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/editor/EditorActions.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/editor/EditorActions.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/editor/EditorActions.cpp"
+
+CMakeFiles/HorizonCore.dir/engine/src/editor/EditorActions.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/HorizonCore.dir/engine/src/editor/EditorActions.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/rianjeph/Horizon Engine/engine/src/editor/EditorActions.cpp" > CMakeFiles/HorizonCore.dir/engine/src/editor/EditorActions.cpp.i
+
+CMakeFiles/HorizonCore.dir/engine/src/editor/EditorActions.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/HorizonCore.dir/engine/src/editor/EditorActions.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/rianjeph/Horizon Engine/engine/src/editor/EditorActions.cpp" -o CMakeFiles/HorizonCore.dir/engine/src/editor/EditorActions.cpp.s
+
 CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUI.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
 CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUI.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/editor/EditorUI.cpp
 CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUI.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUI.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUI.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUI.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUI.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUI.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/editor/EditorUI.cpp"
 
 CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUI.cpp.i: cmake_force
@@ -257,7 +383,7 @@ CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUI.cpp.s: cmake_force
 CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUIPanels.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
 CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUIPanels.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/editor/EditorUIPanels.cpp
 CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUIPanels.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUIPanels.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUIPanels.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUIPanels.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUIPanels.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUIPanels.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/editor/EditorUIPanels.cpp"
 
 CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUIPanels.cpp.i: cmake_force
@@ -271,7 +397,7 @@ CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUIPanels.cpp.s: cmake_force
 CMakeFiles/HorizonCore.dir/engine/src/services/BindableEvent.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
 CMakeFiles/HorizonCore.dir/engine/src/services/BindableEvent.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/services/BindableEvent.cpp
 CMakeFiles/HorizonCore.dir/engine/src/services/BindableEvent.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/services/BindableEvent.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/services/BindableEvent.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/services/BindableEvent.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/services/BindableEvent.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/services/BindableEvent.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/services/BindableEvent.cpp"
 
 CMakeFiles/HorizonCore.dir/engine/src/services/BindableEvent.cpp.i: cmake_force
@@ -285,7 +411,7 @@ CMakeFiles/HorizonCore.dir/engine/src/services/BindableEvent.cpp.s: cmake_force
 CMakeFiles/HorizonCore.dir/engine/src/services/HorizonStore.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
 CMakeFiles/HorizonCore.dir/engine/src/services/HorizonStore.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/services/HorizonStore.cpp
 CMakeFiles/HorizonCore.dir/engine/src/services/HorizonStore.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/services/HorizonStore.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/services/HorizonStore.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/services/HorizonStore.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/services/HorizonStore.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/services/HorizonStore.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/services/HorizonStore.cpp"
 
 CMakeFiles/HorizonCore.dir/engine/src/services/HorizonStore.cpp.i: cmake_force
@@ -299,7 +425,7 @@ CMakeFiles/HorizonCore.dir/engine/src/services/HorizonStore.cpp.s: cmake_force
 CMakeFiles/HorizonCore.dir/engine/src/services/LoopService.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
 CMakeFiles/HorizonCore.dir/engine/src/services/LoopService.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/services/LoopService.cpp
 CMakeFiles/HorizonCore.dir/engine/src/services/LoopService.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/services/LoopService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/services/LoopService.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/services/LoopService.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/services/LoopService.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/services/LoopService.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/services/LoopService.cpp"
 
 CMakeFiles/HorizonCore.dir/engine/src/services/LoopService.cpp.i: cmake_force
@@ -313,7 +439,7 @@ CMakeFiles/HorizonCore.dir/engine/src/services/LoopService.cpp.s: cmake_force
 CMakeFiles/HorizonCore.dir/engine/src/services/MessagingService.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
 CMakeFiles/HorizonCore.dir/engine/src/services/MessagingService.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/services/MessagingService.cpp
 CMakeFiles/HorizonCore.dir/engine/src/services/MessagingService.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/services/MessagingService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/services/MessagingService.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/services/MessagingService.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/services/MessagingService.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/services/MessagingService.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/services/MessagingService.cpp"
 
 CMakeFiles/HorizonCore.dir/engine/src/services/MessagingService.cpp.i: cmake_force
@@ -327,7 +453,7 @@ CMakeFiles/HorizonCore.dir/engine/src/services/MessagingService.cpp.s: cmake_for
 CMakeFiles/HorizonCore.dir/engine/src/services/SharedStorage.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
 CMakeFiles/HorizonCore.dir/engine/src/services/SharedStorage.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/services/SharedStorage.cpp
 CMakeFiles/HorizonCore.dir/engine/src/services/SharedStorage.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/services/SharedStorage.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/services/SharedStorage.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/services/SharedStorage.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/services/SharedStorage.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/services/SharedStorage.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/services/SharedStorage.cpp"
 
 CMakeFiles/HorizonCore.dir/engine/src/services/SharedStorage.cpp.i: cmake_force
@@ -341,7 +467,7 @@ CMakeFiles/HorizonCore.dir/engine/src/services/SharedStorage.cpp.s: cmake_force
 CMakeFiles/HorizonCore.dir/engine/src/services/ServerScripts.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
 CMakeFiles/HorizonCore.dir/engine/src/services/ServerScripts.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/services/ServerScripts.cpp
 CMakeFiles/HorizonCore.dir/engine/src/services/ServerScripts.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/services/ServerScripts.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/services/ServerScripts.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/services/ServerScripts.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/services/ServerScripts.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/services/ServerScripts.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/services/ServerScripts.cpp"
 
 CMakeFiles/HorizonCore.dir/engine/src/services/ServerScripts.cpp.i: cmake_force
@@ -355,7 +481,7 @@ CMakeFiles/HorizonCore.dir/engine/src/services/ServerScripts.cpp.s: cmake_force
 CMakeFiles/HorizonCore.dir/engine/src/services/SoundService.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
 CMakeFiles/HorizonCore.dir/engine/src/services/SoundService.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/services/SoundService.cpp
 CMakeFiles/HorizonCore.dir/engine/src/services/SoundService.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/services/SoundService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/services/SoundService.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/services/SoundService.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/services/SoundService.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/services/SoundService.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/services/SoundService.cpp"
 
 CMakeFiles/HorizonCore.dir/engine/src/services/SoundService.cpp.i: cmake_force
@@ -369,7 +495,7 @@ CMakeFiles/HorizonCore.dir/engine/src/services/SoundService.cpp.s: cmake_force
 CMakeFiles/HorizonCore.dir/engine/src/services/TagService.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
 CMakeFiles/HorizonCore.dir/engine/src/services/TagService.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/services/TagService.cpp
 CMakeFiles/HorizonCore.dir/engine/src/services/TagService.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/services/TagService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/services/TagService.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/services/TagService.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/services/TagService.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/services/TagService.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/services/TagService.cpp"
 
 CMakeFiles/HorizonCore.dir/engine/src/services/TagService.cpp.i: cmake_force
@@ -383,7 +509,7 @@ CMakeFiles/HorizonCore.dir/engine/src/services/TagService.cpp.s: cmake_force
 CMakeFiles/HorizonCore.dir/engine/src/services/TweenService.cpp.o: CMakeFiles/HorizonCore.dir/flags.make
 CMakeFiles/HorizonCore.dir/engine/src/services/TweenService.cpp.o: /Users/rianjeph/Horizon\ Engine/engine/src/services/TweenService.cpp
 CMakeFiles/HorizonCore.dir/engine/src/services/TweenService.cpp.o: CMakeFiles/HorizonCore.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/services/TweenService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/HorizonCore.dir/engine/src/services/TweenService.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/HorizonCore.dir/engine/src/services/TweenService.cpp.o -MF CMakeFiles/HorizonCore.dir/engine/src/services/TweenService.cpp.o.d -o CMakeFiles/HorizonCore.dir/engine/src/services/TweenService.cpp.o -c "/Users/rianjeph/Horizon Engine/engine/src/services/TweenService.cpp"
 
 CMakeFiles/HorizonCore.dir/engine/src/services/TweenService.cpp.i: cmake_force
@@ -397,17 +523,26 @@ CMakeFiles/HorizonCore.dir/engine/src/services/TweenService.cpp.s: cmake_force
 # Object files for target HorizonCore
 HorizonCore_OBJECTS = \
 "CMakeFiles/HorizonCore.dir/engine/src/core/Engine.cpp.o" \
+"CMakeFiles/HorizonCore.dir/engine/src/core/EngineMode.cpp.o" \
 "CMakeFiles/HorizonCore.dir/engine/src/core/Scene.cpp.o" \
 "CMakeFiles/HorizonCore.dir/engine/src/object/Instance.cpp.o" \
 "CMakeFiles/HorizonCore.dir/engine/src/object/Part.cpp.o" \
+"CMakeFiles/HorizonCore.dir/engine/src/object/Script.cpp.o" \
+"CMakeFiles/HorizonCore.dir/engine/src/object/ServerScript.cpp.o" \
+"CMakeFiles/HorizonCore.dir/engine/src/object/LocalScript.cpp.o" \
+"CMakeFiles/HorizonCore.dir/engine/src/object/ModuleScript.cpp.o" \
+"CMakeFiles/HorizonCore.dir/engine/src/object/Folder.cpp.o" \
+"CMakeFiles/HorizonCore.dir/engine/src/object/SpotLight.cpp.o" \
 "CMakeFiles/HorizonCore.dir/engine/src/events/HorizonEvent.cpp.o" \
 "CMakeFiles/HorizonCore.dir/engine/src/events/HorizonFunction.cpp.o" \
 "CMakeFiles/HorizonCore.dir/engine/src/renderer/Camera.cpp.o" \
 "CMakeFiles/HorizonCore.dir/engine/src/renderer/EditorCamera.cpp.o" \
 "CMakeFiles/HorizonCore.dir/engine/src/renderer/Framebuffer.cpp.o" \
 "CMakeFiles/HorizonCore.dir/engine/src/renderer/Input.cpp.o" \
+"CMakeFiles/HorizonCore.dir/engine/src/renderer/PlayCamera.cpp.o" \
 "CMakeFiles/HorizonCore.dir/engine/src/renderer/Renderer.cpp.o" \
 "CMakeFiles/HorizonCore.dir/engine/src/renderer/Shader.cpp.o" \
+"CMakeFiles/HorizonCore.dir/engine/src/editor/EditorActions.cpp.o" \
 "CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUI.cpp.o" \
 "CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUIPanels.cpp.o" \
 "CMakeFiles/HorizonCore.dir/engine/src/services/BindableEvent.cpp.o" \
@@ -424,17 +559,26 @@ HorizonCore_OBJECTS = \
 HorizonCore_EXTERNAL_OBJECTS =
 
 libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/core/Engine.cpp.o
+libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/core/EngineMode.cpp.o
 libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/core/Scene.cpp.o
 libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/object/Instance.cpp.o
 libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/object/Part.cpp.o
+libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/object/Script.cpp.o
+libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/object/ServerScript.cpp.o
+libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/object/LocalScript.cpp.o
+libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/object/ModuleScript.cpp.o
+libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/object/Folder.cpp.o
+libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/object/SpotLight.cpp.o
 libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/events/HorizonEvent.cpp.o
 libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/events/HorizonFunction.cpp.o
 libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/renderer/Camera.cpp.o
 libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/renderer/EditorCamera.cpp.o
 libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/renderer/Framebuffer.cpp.o
 libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/renderer/Input.cpp.o
+libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/renderer/PlayCamera.cpp.o
 libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/renderer/Renderer.cpp.o
 libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/renderer/Shader.cpp.o
+libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/editor/EditorActions.cpp.o
 libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUI.cpp.o
 libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/editor/EditorUIPanels.cpp.o
 libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/services/BindableEvent.cpp.o
@@ -448,7 +592,7 @@ libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/services/TagService.cpp.
 libHorizonCore.a: CMakeFiles/HorizonCore.dir/engine/src/services/TweenService.cpp.o
 libHorizonCore.a: CMakeFiles/HorizonCore.dir/build.make
 libHorizonCore.a: CMakeFiles/HorizonCore.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX static library libHorizonCore.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/rianjeph/Horizon Engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_33) "Linking CXX static library libHorizonCore.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/HorizonCore.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/HorizonCore.dir/link.txt --verbose=$(VERBOSE)
 

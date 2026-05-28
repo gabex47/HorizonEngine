@@ -1,6 +1,9 @@
 #include "EditorUI.h"
 
+#include "core/EngineMode.h"
+#include "editor/EditorActions.h"
 #include "renderer/Framebuffer.h"
+#include "services/Scene.h"
 
 #include <imgui.h>
 #include <imgui_internal.h>
@@ -117,6 +120,43 @@ void EditorUI::SetMouseInputEnabled(bool enabled) { mouseInputEnabled = enabled;
 void EditorUI::RenderViewport(Framebuffer& fbo)
 {
     ImGui::Begin("Viewport", nullptr, ImGuiWindowFlags_NoScrollbar);
+    ImGui::BeginChild("Toolbar", ImVec2(0, 28), false, ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoScrollWithMouse);
+
+    ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.16f, 0.48f, 0.24f, 1.0f));
+    ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.20f, 0.60f, 0.30f, 1.0f));
+    ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.12f, 0.38f, 0.18f, 1.0f));
+    if (ImGui::Button("▶ Play") && EditorActions::EnterPlayMode())
+        PushLog("▶ Game started");
+    ImGui::PopStyleColor(3);
+
+    ImGui::SameLine();
+    ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.58f, 0.16f, 0.16f, 1.0f));
+    ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.72f, 0.22f, 0.22f, 1.0f));
+    ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.46f, 0.12f, 0.12f, 1.0f));
+    if (ImGui::Button("⏹ Stop") && EditorActions::ExitPlayMode())
+        PushLog("⏹ Game stopped");
+    ImGui::PopStyleColor(3);
+
+    ImGui::SameLine();
+    if (ImGui::Button("⟳ Reset"))
+    {
+        if (gEngineMode == EngineMode::Play && EditorActions::ExitPlayMode())
+            PushLog("⏹ Game stopped");
+        EditorActions::ResetScene();
+        selectedInstance.reset();
+    }
+
+    ImGui::SameLine();
+    ImGui::SeparatorEx(ImGuiSeparatorFlags_Vertical);
+    ImGui::SameLine();
+    if (ImGui::Button("+ Part"))
+        selectedInstance = EditorActions::InsertObject("Part", Scene::Get().GetRoot());
+    ImGui::SameLine();
+    if (ImGui::Button("+ Folder"))
+        selectedInstance = EditorActions::InsertObject("Folder", Scene::Get().GetRoot());
+
+    ImGui::EndChild();
+
     ImVec2 size = ImGui::GetContentRegionAvail();
     if (size.x > 1.0f && size.y > 1.0f) {
         const int width = static_cast<int>(size.x), height = static_cast<int>(size.y);
@@ -124,9 +164,9 @@ void EditorUI::RenderViewport(Framebuffer& fbo)
         const ImVec2 cursor = ImGui::GetCursorPos();
         ImGui::Image((ImTextureID)(intptr_t)fbo.GetTexture(), size, ImVec2(0, 1), ImVec2(1, 0));
         ImGui::SetCursorPos(ImVec2(cursor.x + 10.0f, cursor.y + 10.0f));
-        ImGui::TextUnformatted("HorizonEngine v0.1 | Opal"); ImGui::Text("FPS: %.1f", currentFPS);
-        ImGui::TextUnformatted("WASD to move | Mouse to look");
-        ImGui::TextUnformatted("Tab — unlock cursor | Escape — lock cursor");
+        ImGui::TextUnformatted("HorizonEngine v0.1 | Opal");
+        ImGui::Text("Mode: %s", gEngineMode == EngineMode::Play ? "Play" : "Edit");
+        ImGui::Text("FPS: %.1f", currentFPS);
     }
     ImGui::End();
 }

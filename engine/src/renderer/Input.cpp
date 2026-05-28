@@ -16,6 +16,8 @@ int toGlfwKey(Horizon::Key key)
     case Horizon::Key::A: return GLFW_KEY_A;
     case Horizon::Key::S: return GLFW_KEY_S;
     case Horizon::Key::D: return GLFW_KEY_D;
+    case Horizon::Key::I: return GLFW_KEY_I;
+    case Horizon::Key::O: return GLFW_KEY_O;
     case Horizon::Key::Q: return GLFW_KEY_Q;
     case Horizon::Key::E: return GLFW_KEY_E;
     case Horizon::Key::Tab: return GLFW_KEY_TAB;

@@ -1,0 +1,8 @@
+cat > .gitignore << 'EOF'
+build/
+editor/node_modules/
+editor/src-tauri/target/
+*.o
+*.a
+horizonstore.json
+EOF

@@ -1,13 +1,18 @@
 #include "Renderer.h"
 
+#include "core/EngineMode.h"
 #include "services/Scene.h"
 
 #define GLFW_INCLUDE_NONE
 #define GL_SILENCE_DEPRECATION
 #include <GLFW/glfw3.h>
 #include <OpenGL/gl3.h>
+#include <algorithm>
+#include <glm/common.hpp>
+#include <glm/ext/matrix_clip_space.hpp>
 #include <glm/ext/matrix_transform.hpp>
 #include <glm/mat4x4.hpp>
+#include <glm/trigonometric.hpp>
 #include <glm/vec3.hpp>
 #include <iostream>
 #include <vector>
@@ -24,9 +29,10 @@ void main()
 constexpr const char* kFragmentShader = R"(#version 330 core
 out vec4 FragColor;
 uniform vec3 uColor;
+uniform float uAlpha;
 void main()
 {
-    FragColor = vec4(uColor, 1.0);
+    FragColor = vec4(uColor, uAlpha);
 }
 )";
 
@@ -60,6 +66,18 @@ std::vector<float> buildGridVertices()
         vertices.insert(vertices.end(), {-25.0f, 0.01f, static_cast<float>(i), 25.0f, 0.01f, static_cast<float>(i)});
     }
     return vertices;
+}
+
+glm::vec3 materialTint(const Horizon::Part& part)
+{
+    glm::vec3 color(part.Color.R / 255.0f, part.Color.G / 255.0f, part.Color.B / 255.0f);
+    if (part.Material == "Neon")
+        return glm::clamp(color * 1.5f, glm::vec3(0.0f), glm::vec3(1.0f));
+    if (part.Material == "Metal")
+        return color * 0.7f;
+    if (part.Material == "Grass")
+        return glm::mix(color, glm::vec3(0.2f, 0.6f, 0.1f), 0.5f);
+    return color;
 }
 } // namespace
 namespace Horizon {
@@ -141,7 +159,20 @@ void Renderer::InstallInputCallbacks()
 void Renderer::Update(float deltaTime, bool cameraInputEnabled)
 {
     input.Update();
-    editorCamera.Update(deltaTime, input, cameraInputEnabled);
+    if (gEngineMode == EngineMode::Edit)
+    {
+        editorCamera.Update(deltaTime, input, cameraInputEnabled);
+    }
+    else
+    {
+        const glm::vec2 mouseDelta = input.GetMouseDelta();
+        playCamera.Update(
+            window,
+            deltaTime,
+            mouseDelta.x,
+            mouseDelta.y,
+            input.GetMouseButton(MouseButton::Left));
+    }
     input.EndFrame();
 }
 
@@ -153,16 +184,24 @@ void Renderer::RenderPart(Part& part)
 
 void Renderer::RenderPart(Part& part, const glm::mat4& view, const glm::mat4& projection)
 {
+    if (part.Transparency >= 1.0f)
+        return;
+
     glm::mat4 model(1.0f);
     model = glm::translate(model, glm::vec3(part.Position.X, part.Position.Y, part.Position.Z));
+    model = glm::rotate(model, glm::radians(part.Rotation.X), glm::vec3(1.0f, 0.0f, 0.0f));
+    model = glm::rotate(model, glm::radians(part.Rotation.Y), glm::vec3(0.0f, 1.0f, 0.0f));
+    model = glm::rotate(model, glm::radians(part.Rotation.Z), glm::vec3(0.0f, 0.0f, 1.0f));
     model = glm::scale(model, glm::vec3(part.Size.X, part.Size.Y, part.Size.Z));
 
     const glm::mat4 mvp = projection * view * model;
-    const glm::vec3 color(part.Color.R / 255.0f, part.Color.G / 255.0f, part.Color.B / 255.0f);
+    const glm::vec3 color = materialTint(part);
+    const float alpha = 1.0f - std::clamp(part.Transparency, 0.0f, 1.0f);
 
     shader.Use();
     shader.SetMat4("uMVP", mvp);
     shader.SetVec3("uColor", color);
+    shader.SetFloat("uAlpha", alpha);
     glBindVertexArray(vao);
     glDrawArrays(GL_TRIANGLES, 0, 36);
 }
@@ -185,6 +224,7 @@ void Renderer::RenderGround(const glm::mat4& view, const glm::mat4& projection)
     shader.Use();
     shader.SetMat4("uMVP", mvp);
     shader.SetVec3("uColor", glm::vec3(0.15f, 0.15f, 0.15f));
+    shader.SetFloat("uAlpha", 1.0f);
     glBindVertexArray(groundVao);
     glDrawArrays(GL_TRIANGLES, 0, 6);
 
@@ -204,9 +244,39 @@ void Renderer::RenderScene()
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     RenderGround(view, projection);
-    for (const auto& child : Scene::Get().GetChildren())
-        if (auto part = std::dynamic_pointer_cast<Part>(child))
-            RenderPart(*part, view, projection);
+
+    activeView = view;
+    activeProjection = projection;
+
+    glDisable(GL_BLEND);
+    transparentRenderPass = false;
+    RenderInstanceRecursive(Scene::Get().GetRoot());
+
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    transparentRenderPass = true;
+    RenderInstanceRecursive(Scene::Get().GetRoot());
+    glDisable(GL_BLEND);
+}
+
+void Renderer::RenderInstanceRecursive(std::shared_ptr<Instance> instance)
+{
+    if (!instance)
+        return;
+
+    if (instance->GetClass() == "Part")
+    {
+        auto part = std::dynamic_pointer_cast<Part>(instance);
+        if (part)
+        {
+            const bool transparent = part->Transparency > 0.0f;
+            if (transparent == transparentRenderPass)
+                RenderPart(*part, activeView, activeProjection);
+        }
+    }
+
+    for (auto& child : instance->GetChildren())
+        RenderInstanceRecursive(child);
 }
 
 void Renderer::UpdateSceneViewport()
@@ -219,17 +289,17 @@ void Renderer::UpdateSceneViewport()
     sceneViewport.Height = viewport[3];
 }
 
-glm::mat4 Renderer::GetSceneViewMatrix() const
+glm::mat4 Renderer::GetSceneViewMatrix()
 {
-    if (sceneCameraMode == SceneCameraMode::Game)
-        return gameCamera.GetViewMatrix();
+    if (gEngineMode == EngineMode::Play)
+        return playCamera.GetViewMatrix(playCameraTarget);
     return editorCamera.GetViewMatrix();
 }
 
 glm::mat4 Renderer::GetSceneProjectionMatrix() const
 {
-    if (sceneCameraMode == SceneCameraMode::Game)
-        return gameCamera.GetProjectionMatrix(sceneViewport.AspectRatio());
+    if (gEngineMode == EngineMode::Play)
+        return glm::perspective(glm::radians(60.0f), sceneViewport.AspectRatio(), 0.1f, 1000.0f);
     return editorCamera.GetProjectionMatrix(sceneViewport.AspectRatio());
 }
 
@@ -255,6 +325,26 @@ void Renderer::SetCursorLocked(bool locked)
 bool Renderer::GetKey(Key key) const
 {
     return input.GetKey(key);
+}
+
+void Renderer::SetPlayCameraTarget(const glm::vec3& target)
+{
+    playCameraTarget = target;
+}
+
+glm::vec3 Renderer::GetPlayCameraForwardDir()
+{
+    return playCamera.GetForwardDir();
+}
+
+float Renderer::GetPlayCameraDistance() const
+{
+    return playCamera.orbitDist;
+}
+
+void Renderer::ResetPlayCamera()
+{
+    playCamera = PlayCamera();
 }
 
 GLFWwindow* Renderer::GetWindow() const

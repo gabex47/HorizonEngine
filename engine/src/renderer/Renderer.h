@@ -4,6 +4,7 @@
 #include "EditorCamera.h"
 #include "Input.h"
 #include "Part.h"
+#include "PlayCamera.h"
 #include "Shader.h"
 
 #include <glm/mat4x4.hpp>
@@ -46,14 +47,19 @@ public:
     void SwapBuffers();
     void SetCursorLocked(bool locked);
     bool GetKey(Key key) const;
+    void SetPlayCameraTarget(const glm::vec3& target);
+    glm::vec3 GetPlayCameraForwardDir();
+    float GetPlayCameraDistance() const;
+    void ResetPlayCamera();
     GLFWwindow* GetWindow() const;
     void Shutdown();
 
 private:
     void UpdateSceneViewport();
+    void RenderInstanceRecursive(std::shared_ptr<Instance> instance);
     void RenderPart(Part& part, const glm::mat4& view, const glm::mat4& projection);
     void RenderGround(const glm::mat4& view, const glm::mat4& projection);
-    glm::mat4 GetSceneViewMatrix() const;
+    glm::mat4 GetSceneViewMatrix();
     glm::mat4 GetSceneProjectionMatrix() const;
 
     GLFWwindow* window = nullptr;
@@ -68,6 +74,11 @@ private:
     SceneCameraMode sceneCameraMode = SceneCameraMode::Editor;
     EditorCamera editorCamera;
     Camera gameCamera;
+    PlayCamera playCamera;
+    glm::vec3 playCameraTarget{0.0f, 1.0f, 0.0f};
+    glm::mat4 activeView{1.0f};
+    glm::mat4 activeProjection{1.0f};
+    bool transparentRenderPass = false;
     Input input;
     Shader shader;
 };

@@ -6,7 +6,5 @@ CXX_DEFINES = -DGL_SILENCE_DEPRECATION
 
 CXX_INCLUDES = -I"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src" -I"/Users/rianjeph/Horizon Engine/build/_deps/imgui-src/backends" -I"/Users/rianjeph/Horizon Engine/build/_deps/glfw-src/include" -iframework /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks
 
-CXX_FLAGSarm64 = -g -arch arm64
-
-CXX_FLAGS = -g -arch arm64
+CXX_FLAGS = -g
 

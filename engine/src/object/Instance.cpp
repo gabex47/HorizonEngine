@@ -25,6 +25,20 @@ void Instance::SetParent(std::shared_ptr<Instance> parent)
         Parent->Children.push_back(shared_from_this());
 }
 
+void Instance::RemoveChild(std::shared_ptr<Instance> child)
+{
+    if (!child)
+        return;
+
+    const auto oldSize = Children.size();
+    Children.erase(std::remove_if(Children.begin(), Children.end(),
+                       [&child](const auto& existing) { return existing.get() == child.get(); }),
+        Children.end());
+
+    if (Children.size() != oldSize && child->Parent.get() == this)
+        child->Parent.reset();
+}
+
 std::shared_ptr<Instance> Instance::FindFirstChild(const std::string& name)
 {
     const auto found = std::find_if(Children.begin(), Children.end(),

@@ -84,17 +84,26 @@ target_compile_features(HorizonShared INTERFACE cxx_std_20)
 
 add_library(HorizonCore STATIC
     engine/src/core/Engine.cpp
+    engine/src/core/EngineMode.cpp
     engine/src/core/Scene.cpp
     engine/src/object/Instance.cpp
     engine/src/object/Part.cpp
+    engine/src/object/Script.cpp
+    engine/src/object/ServerScript.cpp
+    engine/src/object/LocalScript.cpp
+    engine/src/object/ModuleScript.cpp
+    engine/src/object/Folder.cpp
+    engine/src/object/SpotLight.cpp
     engine/src/events/HorizonEvent.cpp
     engine/src/events/HorizonFunction.cpp
     engine/src/renderer/Camera.cpp
     engine/src/renderer/EditorCamera.cpp
     engine/src/renderer/Framebuffer.cpp
     engine/src/renderer/Input.cpp
+    engine/src/renderer/PlayCamera.cpp
     engine/src/renderer/Renderer.cpp
     engine/src/renderer/Shader.cpp
+    engine/src/editor/EditorActions.cpp
     engine/src/editor/EditorUI.cpp
     engine/src/editor/EditorUIPanels.cpp
     engine/src/services/BindableEvent.cpp
